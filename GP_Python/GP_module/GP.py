@@ -6,4 +6,13 @@ class GP:
     ell = 1
 
 
-    def
+    # tbd: GP-Reg
+    def regression(self,x):
+        pass
+
+    # tbd: GP-Train
+    def train(selfself, X, Y):
+        pass
+
+
+
