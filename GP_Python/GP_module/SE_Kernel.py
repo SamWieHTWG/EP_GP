@@ -4,6 +4,9 @@ import math
 
 def SE_Kernel(x1, x2, ell, s_f):
 
+    x1 = np.transpose(x1)
+    x2 = np.transpose(x2)
+
     s1 = x1.shape
     s2 = x2.shape
 
@@ -19,7 +22,7 @@ def SE_Kernel(x1, x2, ell, s_f):
     for ii in index_1:
         for jj in index_2:
 
-            norm_factor[ii,jj] = np.power(np.linalg.norm(x1[:,ii]-x2[:,jj]), 2) # td: find numpy function for power of two
+            norm_factor[ii,jj] = np.power(np.linalg.norm(x1[:,ii]-x2[:,jj]), 2)
 
             k[ii, jj] = s_f*s_f * math.exp( -1/(2*ell*ell) * norm_factor[ii, jj])
 
