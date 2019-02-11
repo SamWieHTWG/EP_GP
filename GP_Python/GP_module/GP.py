@@ -26,9 +26,9 @@ class GP:
     def regression(self, x):
         k_xX = SE_Kernel(x,self.X_train, self.l, self.sig_f)
         k_xx = SE_Kernel(x, x, self.l, self.sig_f)
-        print(k_xX)
+        #print(k_xX)
         #print(self.k_XX)
-        print(self.inv_Cov)
+        #print(self.inv_Cov)
         y_help = self.inv_Cov * self.y_train
         y_estimated = k_xX * y_help
 
