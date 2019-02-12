@@ -9,13 +9,18 @@ def likelihood_cost_function(X, Y, length, sig_f, l, sig_n):
 
     help_var = inv_k_Y * Y
 
-    term1 = -1/2 * np.transpose(Y) * help_var
-    term2 = -1/2 * np.log(np.linalg.det(k_Y))
-    term3 = -1*length/2* np.log(2*np.pi)
+    if np.linalg.det(k_Y) == 0:
+        return -1 * np.Inf
+    else:
 
-    likelihood = term1 + term2 + term3
+        term1 = -1/2 * np.transpose(Y) * help_var
+        term2 = -1/2 * np.log(np.linalg.det(k_Y))
+        term3 = -1*length/2* np.log(2*np.pi)
 
-    return likelihood
+        likelihood = term1 + term2 + term3
+        print(likelihood)
+
+        return likelihood
 
 # Test
 X = np.matrix('-1; 0; 1')

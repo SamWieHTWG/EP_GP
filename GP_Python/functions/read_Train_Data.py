@@ -4,7 +4,7 @@ import scipy.io as io
 
 def read_Train_Data():
 
-    filename = '/home/samuel/Documents/EP_GP/GP_Python/train_data/data.mat'
+    filename = '/home/samuel/Documents/EP_GP/GP_Python/train_data/data_254.mat'
 
     mat_data_dict = io.loadmat(filename)
 
