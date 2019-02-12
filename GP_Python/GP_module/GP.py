@@ -51,8 +51,8 @@ class GP:
 
 
 
-X = np.matrix('1 1; 0 0; -1 -1')
-y = np.matrix('-1; 0 ; 1')
-gp = GP(X_train=X, y_train=y, sig_n=0.1, l=1, sig_f=1)
-y,C = gp.regression(np.matrix('0.5 0.5'))
-print(y)
+#X = np.matrix('1 1; 0 0; -1 -1')
+#y = np.matrix('-1; 0 ; 1')
+#gp = GP(X_train=X, y_train=y, sig_n=0.1, l=1, sig_f=1)
+#y,C = gp.regression(np.matrix('0.5 0.5'))
+#print(y)

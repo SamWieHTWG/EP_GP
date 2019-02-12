@@ -26,7 +26,6 @@ def SE_Kernel(x1, x2, ell, s_f):
 
             k[ii, jj] = s_f*s_f * math.exp( -1/(2*ell*ell) * norm_factor[ii, jj])
 
-
     return k
 
 

@@ -1,7 +1,7 @@
 from GP_module.SE_Kernel import  SE_Kernel
 import numpy as np
 
-def likelihood_cost_function(X, Y, length, order, sig_f, l, sig_n):
+def likelihood_cost_function(X, Y, length, sig_f, l, sig_n):
 
     k_XX = SE_Kernel(X, X, l, sig_f)
     k_Y = k_XX + sig_n * sig_n * np.eye(length)
@@ -11,7 +11,7 @@ def likelihood_cost_function(X, Y, length, order, sig_f, l, sig_n):
 
     term1 = -1/2 * np.transpose(Y) * help_var
     term2 = -1/2 * np.log(np.linalg.det(k_Y))
-    term3 = -1*order/2* np.log(2*np.pi)
+    term3 = -1*length/2* np.log(2*np.pi)
 
     likelihood = term1 + term2 + term3
 
@@ -21,4 +21,4 @@ def likelihood_cost_function(X, Y, length, order, sig_f, l, sig_n):
 X = np.matrix('-1; 0; 1')
 Y = np.matrix('1; 0; -1')
 
-print(likelihood_cost_function(X, Y, 3, 1, 1, 1, 0.1))
+print(likelihood_cost_function(X, Y, 3, 1, 1, 0.1))
