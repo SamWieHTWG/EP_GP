@@ -1,6 +1,6 @@
 import numpy as np
 from GP_module.SE_Kernel import SE_Kernel
-
+from functions.data_normalization import *
 class GP:
 
     def __init__(self, X_train, y_train, sig_n, l, sig_f): # tbd: Konstruktor anpassen an arg* aus Folien, z.B. ob Parameter gegeben
@@ -10,7 +10,7 @@ class GP:
         # Konstruktor
         #
         self.X_train = X_train
-        self.y_train = y_train
+        self.y_train, self.y_mean, self.y_compression_fact = train_data_normalization(y_train)
         self.sig_n = sig_n
         self.sig_f = sig_f
         self.l = l
@@ -30,7 +30,7 @@ class GP:
         #print(self.k_XX)
         #print(self.inv_Cov)
         y_help = self.inv_Cov * self.y_train
-        y_estimated = k_xX * y_help
+        y_estimated = train_data_inv_normalization(k_xX * y_help, self.y_mean, self.y_compression_fact)
 
         estimation_deviation = k_xx - k_xX * self.inv_Cov * np.transpose(k_xX)
 

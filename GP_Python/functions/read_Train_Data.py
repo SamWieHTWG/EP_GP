@@ -12,10 +12,10 @@ def read_Train_Data():
 
 
     train_data = {}
-    train_data['P'] = np.matrix(mat_data[:, 1])
-    train_data['I'] = np.matrix(mat_data[:, 2])
-    num1 = np.matrix(mat_data[:, 3])
-    num2 = np.matrix(mat_data[:, 4])
+    train_data['P'] = np.matrix(mat_data[:, 0])
+    train_data['I'] = np.matrix(mat_data[:, 1])
+    num1 = np.matrix(mat_data[:, 2])
+    num2 = np.matrix(mat_data[:, 3])
     train_data['num'] = np.concatenate((num1, num2), axis=1)
     den1 = np.matrix(mat_data[:, 5])
     den2 = np.matrix(mat_data[:, 6])

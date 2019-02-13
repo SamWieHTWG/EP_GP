@@ -1,11 +1,12 @@
 
 from functions.read_Train_Data import read_Train_Data
+from functions.data_normalization import *
 from HypOpt_module.RandomSearch import RandomSearch
 from GP_module.GP import GP
 import numpy as np
 from scipy import signal
 from matplotlib import pyplot as p
-
+from functions.test_GP import *
 
 # author: Samuel Wiertz, wiertzsamuel@gmail.com
 # date: 11.01.2019
@@ -17,29 +18,14 @@ X_train = np.concatenate((train_data['num'], train_data['den']), axis=1)
 Y_train_P = train_data['P']
 Y_train_I = train_data['I']
 
-# Data Normalization
-Y_train_P_mean = np.mean(Y_train_P)
-Y_train_I_mean = np.mean(Y_train_I)
-Y_train_P_mean_normed = Y_train_P - Y_train_P_mean
-Y_train_I_mean_normed = Y_train_I - Y_train_I_mean
-Y_train_P_compression_factor = np.max(np.abs(Y_train_P_mean_normed))
-Y_train_I_compression_factor = np.max(np.abs(Y_train_I_mean_normed))
-Y_train_P_normed = Y_train_P_mean_normed / Y_train_P_compression_factor
-Y_train_I_normed = Y_train_I_mean_normed / Y_train_I_compression_factor
-
 
 ## get Parameters for Train Data
-P_parameter_lower_bound = [0, 0, 0]
-I_parameter_lower_bound = [0, 0, 0]
-P_parameter_upper_bound = [0.1, 10, 10]
-I_parameter_upper_bound = [0.1, 10, 10]
-
-P_Parameter_Search = RandomSearch(P_parameter_lower_bound, P_parameter_upper_bound)
-I_Parameter_Search = RandomSearch(I_parameter_lower_bound, I_parameter_upper_bound)
+P_Parameter_Search = RandomSearch([0, 0, 0], [0.1, 10, 10])
+I_Parameter_Search = RandomSearch([0, 0, 0], [0.1, 10, 10])
 
 if 0:
-    P_Parameter_Search.optimize_parameters(50, X_train, Y_train_P_normed)
-    I_Parameter_Search.optimize_parameters(50, X_train, Y_train_I_normed)
+    P_Parameter_Search.optimize_parameters(20, X_train, Y_train_P)
+    I_Parameter_Search.optimize_parameters(20, X_train, Y_train_I)
 
     P_optimal_parameters = P_Parameter_Search.get_optimal_parameters()
     I_optimal_parameters = I_Parameter_Search.get_optimal_parameters()
@@ -47,12 +33,13 @@ if 0:
     print(P_optimal_parameters)
     print(I_optimal_parameters)
 else:
-    P_optimal_parameters = [0.077, 9.43, 7.5]
-    I_optimal_parameters = [0.098, 4, 0.71]
+    P_optimal_parameters = [0.05, 7.5, 2.2]
+    I_optimal_parameters = [0.05, 5.28, 0.95]
 
 ## create Gaussian Processes for I-Part and P-Part
-GP_P = GP(X_train, Y_train_P_normed, P_optimal_parameters[0], P_optimal_parameters[1], P_optimal_parameters[2])
-GP_I = GP(X_train, Y_train_I_normed, I_optimal_parameters[0], I_optimal_parameters[1], I_optimal_parameters[2])
+GP_P = GP(X_train, Y_train_P, P_optimal_parameters[0], P_optimal_parameters[1], P_optimal_parameters[2])
+GP_I = GP(X_train, Y_train_I, I_optimal_parameters[0], I_optimal_parameters[1], I_optimal_parameters[2])
+test_GP(GP_P, GP_I)
 
 ## GP_Regression
 X_test = np.matrix([7.8939, 12.8826, -7.4373, 12.8826])

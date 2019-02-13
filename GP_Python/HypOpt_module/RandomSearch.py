@@ -1,6 +1,6 @@
 import numpy as np
 from HypOpt_module.cost_function import likelihood_cost_function
-
+from functions.data_normalization import *
 
 class RandomSearch:
 
@@ -18,7 +18,9 @@ class RandomSearch:
         self.opt_parameters = np.zeros((1, 3))
         pass
 
-    def optimize_parameters(self, num_iterations, optimization_data_X, optimization_data_Y):
+    def optimize_parameters(self, num_iterations, optimization_data_X, optimization_data_Y_unnormed):
+
+        optimization_data_Y, _, _ = train_data_normalization(optimization_data_Y_unnormed)
 
         iteration_cost_result = np.zeros((num_iterations, 1))
         iteration_used_parameters = np.zeros((num_iterations, 3))
