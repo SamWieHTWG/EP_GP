@@ -2,7 +2,7 @@ import pickle
 
 
 def store_GP(GP, filename):
-    path = 'saved_GPs/'
+    path = '/home/samuel/Documents/EP_GP/GP_Python/saved_GPs/'
     file = open(path+filename, 'wb')
     pickle.dump(GP, file)
     file.close()
@@ -10,9 +10,11 @@ def store_GP(GP, filename):
 
 
 def load_GP(filename):
-    path = 'saved_GPs/'
+    path = '/home/samuel/Documents/EP_GP/GP_Python/saved_GPs/'
     file = open(path+filename, 'rb')
     GP = pickle.load(file)
+    #print(GP)
+    file.close()
     return GP
 
 

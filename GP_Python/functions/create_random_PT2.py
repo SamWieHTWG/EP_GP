@@ -35,6 +35,6 @@ def create_random_PT2():
 
     return n_cont, d_cont
 
-
-#print('test-create_random_PT2')
-#print(create_random_PT2())
+if __name__ == '__main__':
+    print('test-create_random_PT2')
+    print(create_random_PT2())

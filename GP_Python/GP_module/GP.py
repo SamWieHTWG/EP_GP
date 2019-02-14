@@ -46,8 +46,11 @@ class GP:
 
         pass
 
+    def __eq__(self, other):  #define test for equality
+        return self.__dict__ == other.__dict__
 
-
+    def __str__(self):
+        return str(self.__dict__)
 
 
 
