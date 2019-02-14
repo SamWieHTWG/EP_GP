@@ -2,7 +2,7 @@ import numpy as np
 
 def create_random_PT2():
 
-    if np.random.rand() > 0.5:
+    if np.random.rand() > 0.7:
 
         real = (np.random.rand()-0.5) * 20
         imag = (np.random.rand()) * 5

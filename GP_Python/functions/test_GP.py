@@ -22,11 +22,9 @@ def test_GP(GP_P, GP_I):
     sys_den = [ol_den[0], (ol_num[0] + ol_den[1]), (ol_num[1] + ol_den[2]), (ol_num[2] + ol_den[3])]
 
     sys = signal.TransferFunction(sys_num, sys_den)
-    t, y = signal.step(system=sys, N= 1000)
+    t, y = signal.step(system=sys, N=200)
     p.plot(t, y)
     p.show()
-
-
 
     pass
 
