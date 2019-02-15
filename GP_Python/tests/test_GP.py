@@ -5,7 +5,7 @@ from functions.create_random_PT2 import create_random_PT2
 from functions.data_normalization import *
 from functions.store_GP import store_GP, load_GP
 from functions.read_Train_Data import read_Train_Data
-from GP_module.GP import  GP
+from GP_module.GP import GP
 
 
 class TestGP(unittest.TestCase):  # inherits from unittest.testcase

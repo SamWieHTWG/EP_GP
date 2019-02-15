@@ -38,7 +38,9 @@ else:
 GP_P = GP(X_train, Y_train_P, P_optimal_parameters[0], P_optimal_parameters[1], P_optimal_parameters[2])
 GP_I = GP(X_train, Y_train_I, I_optimal_parameters[0], I_optimal_parameters[1], I_optimal_parameters[2])
 store_GP(GP_P, 'test')
-GP_P2 = load_GP('test')
+store_GP(GP_I, 'test')
+GP_P2 = load_GP('2693')
+GP_I2 = load_GP('2693')
 
 rating = get_rating(GP_P2, GP_I, 30, 1)
 print(rating)
