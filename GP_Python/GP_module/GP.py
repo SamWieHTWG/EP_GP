@@ -29,10 +29,12 @@ class GP:
         #print(k_xX)
         #print(self.k_XX)
         #print(self.inv_Cov)
-        y_help = self.inv_Cov * self.y_train
-        y_estimated = train_data_inv_normalization(k_xX * y_help, self.y_mean, self.y_compression_fact)
+        #y_help = np.matmul(self.inv_Cov , self.y_train)
+        #y_dot = np.matmul(k_xX ,y_help)
+        y_est_normed = np.matmul(k_xX, np.matmul(self.inv_Cov, self.y_train))
+        y_estimated = train_data_inv_normalization(y_est_normed, self.y_mean, self.y_compression_fact)
 
-        estimation_deviation = k_xx - k_xX * self.inv_Cov * np.transpose(k_xX)
+        estimation_deviation = k_xx - np.matmul(k_xX , np.matmul(self.inv_Cov , np.ndarray.transpose(k_xX)))
 
         return y_estimated, estimation_deviation
 
@@ -57,9 +59,12 @@ class GP:
         return str(self.__dict__)
 
 
-
-#X = np.matrix('1 1; 0 0; -1 -1')
-#y = np.matrix('-1; 0 ; 1')
-#gp = GP(X_train=X, y_train=y, sig_n=0.1, l=1, sig_f=1)
-#y,C = gp.regression(np.matrix('0.5 0.5'))
-#print(y)
+if __name__ == '__main__':  # if this is main file, run fcn
+    X = np.array([[1, 1], [0, 0], [-1, -1]])
+    print(X)
+    y = np.array([[-1], [0], [1]])
+    print(y)
+    gp = GP(X_train=X, y_train=y, sig_n=0.1, l=1, sig_f=1)
+    y, C = gp.regression(np.array([0.5, 0.5]))
+    print(y)
+    print(C)

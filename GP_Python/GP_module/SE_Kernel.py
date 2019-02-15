@@ -4,14 +4,31 @@ import math
 
 def SE_Kernel(x1, x2, ell, s_f):
 
-    x1 = np.transpose(x1)
-    x2 = np.transpose(x2)
+    if x1.ndim >1:
+        x1 = np.ndarray.transpose(x1)
+    else:
+        x1 = np.expand_dims(x1, axis=0)
+        x1 = np.ndarray.transpose(x1)
 
-    s1 = x1.shape
-    s2 = x2.shape
+    if x2.ndim >1:
+        x2 = np.ndarray.transpose(x2)
+    else:
+        x2 = np.expand_dims(x2, axis=0)
+        x2 = np.ndarray.transpose(x2)
 
-    l1 = s1[1]
-    l2 = s2[1]
+    if x1.ndim > 1:
+
+        s1 = x1.shape
+        l1 = s1[1]
+    else:
+        l1 = 1
+
+    if x2.ndim > 1:
+
+        s2 = x2.shape
+        l2 = s2[1]
+    else:
+        l2 = 1
 
     index_1 = np.arange(l1)
     index_2 = np.arange(l2)

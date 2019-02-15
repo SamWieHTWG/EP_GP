@@ -9,21 +9,29 @@ def read_Train_Data():
 
     mat_data_dict = io.loadmat(filename)
 
-    mat_data = np.matrix(mat_data_dict['data'])
+    mat_data = np.array(mat_data_dict['data'])
 
 
     train_data = {}
-    train_data['P'] = np.matrix(mat_data[:, 0])
-    train_data['I'] = np.matrix(mat_data[:, 1])
-    num1 = np.matrix(mat_data[:, 2])
-    num2 = np.matrix(mat_data[:, 3])
+    train_p = mat_data[:, 0]
+    train_i = mat_data[:, 1]
+    train_data['P'] = np.reshape(train_p, (train_p.size, 1))
+    train_data['I'] = np.reshape(train_i, (train_i.size, 1))
+    num1 = mat_data[:, 2]
+    num2 = mat_data[:, 3]
+    num1 = np.reshape(num1, (num1.size, 1))
+    num2 = np.reshape(num1, (num2.size, 1))
+
     train_data['num'] = np.concatenate((num1, num2), axis=1)
-    den1 = np.matrix(mat_data[:, 5])
-    den2 = np.matrix(mat_data[:, 6])
+
+    den1 = mat_data[:, 5]
+    den2 = mat_data[:, 6]
+    den1 = np.reshape(den1,(den1.size, 1))
+    den2 = np.reshape(den2, (den2.size, 1))
     train_data['den'] = np.concatenate((den1, den2), axis=1)
 
     return train_data
 
 # test:
-
-#print(read_Train_Data())
+if __name__ == '__main__':  # if this is main file, run fcn
+    read_Train_Data()
