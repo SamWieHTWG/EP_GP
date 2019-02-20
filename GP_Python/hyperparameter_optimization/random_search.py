@@ -1,6 +1,7 @@
 import numpy as np
-from HypOpt_module.cost_function import likelihood_cost_function
+from hyperparameter_optimization.cost_function import likelihood_cost_function
 from functions.data_normalization import *
+
 
 class RandomSearch:
 
@@ -18,13 +19,13 @@ class RandomSearch:
         self.opt_parameters = np.zeros((1, 3))
         pass
 
-    def optimize_parameters(self, num_iterations, optimization_data_X, optimization_data_Y_unnormed):
+    def optimize_parameters(self, num_iterations, optimization_data_x, optimization_data_y_unnormed):
 
-        optimization_data_Y, _, _ = train_data_normalization(optimization_data_Y_unnormed)
+        optimization_data_y, _, _ = train_data_normalization(optimization_data_y_unnormed)
 
         iteration_cost_result = np.zeros((num_iterations, 1))
         iteration_used_parameters = np.zeros((num_iterations, 3))
-        length = len(optimization_data_Y)
+        length = len(optimization_data_y)
 
         for iteration in range(0, num_iterations):
 
@@ -34,15 +35,13 @@ class RandomSearch:
 
             iteration_used_parameters[iteration, :] = [sig_n_sample, l_sample, sig_f_sample]
 
-            cost = likelihood_cost_function(optimization_data_X, optimization_data_Y, length, sig_f_sample, l_sample, sig_n_sample)
-            iteration_cost_result[iteration, :] = cost
-            #print(cost)
+            cost = likelihood_cost_function(optimization_data_x, optimization_data_y, length,
+                                            sig_f_sample, l_sample, sig_n_sample)
 
-        #print(iteration_cost_result)
+            iteration_cost_result[iteration, :] = cost
+
         opt_index = np.argmax(iteration_cost_result)
         opt_par = iteration_used_parameters[opt_index, :]
-        #print(opt_index)
-        #print(opt_par)
         self.opt_parameters = opt_par
 
         pass
@@ -53,8 +52,3 @@ class RandomSearch:
 
 
 
-#X = np.matrix('-1; 0; 1')
-#Y = np.matrix('1; 0; -1')
-#Search = RandomSearch([0, 0, 0],[1, 1, 1])
-#Search.optimize_parameters(10000, X, Y)
-#print(Search.get_optimal_parameters())

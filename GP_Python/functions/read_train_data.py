@@ -2,7 +2,7 @@ import numpy as np
 import scipy.io as io
 
 
-def read_Train_Data():
+def read_train_data():
 
     #filename = '/home/samuel/Documents/EP_GP/GP_Python/train_data/data_2693.mat'
     filename = '/home/samuel/Documents/EP_GP/GP_Python/train_data/data_254.mat'
@@ -32,6 +32,7 @@ def read_Train_Data():
 
     return train_data
 
+
 # test:
 if __name__ == '__main__':  # if this is main file, run fcn
-    read_Train_Data()
+    read_train_data()

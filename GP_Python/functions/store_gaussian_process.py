@@ -1,20 +1,20 @@
 import pickle
 
 
-def store_GP(GP, filename):
+def store_gaussian_process(gaussian_process, filename):
     path = '/home/samuel/Documents/EP_GP/GP_Python/saved_GPs/'
     file = open(path+filename, 'wb')
-    pickle.dump(GP, file)
+    pickle.dump(gaussian_process, file)
     file.close()
     pass
 
 
-def load_GP(filename):
+def load_gaussian_process(filename):
     path = '/home/samuel/Documents/EP_GP/GP_Python/saved_GPs/'
     file = open(path+filename, 'rb')
-    GP = pickle.load(file)
-    #print(GP)
+    gaussian_process = pickle.load(file)
+    #print(GaussianProcess)
     file.close()
-    return GP
+    return gaussian_process
 
 

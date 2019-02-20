@@ -1,6 +1,7 @@
 import numpy as np
 
-def create_random_PT2():
+
+def create_random_pt2():
 
     if np.random.rand() > 0.7:
 
@@ -35,6 +36,7 @@ def create_random_PT2():
 
     return n_cont, d_cont
 
+
 if __name__ == '__main__':
-    print('test-create_random_PT2')
-    print(create_random_PT2())
+    print('test-create_random_pt2')
+    print(create_random_pt2())

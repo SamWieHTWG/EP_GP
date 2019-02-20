@@ -1,17 +1,17 @@
 import unittest
 import warnings
 import numpy as np
-from functions.create_random_PT2 import create_random_PT2
+from functions.create_random_pt2 import create_random_pt2
 from functions.data_normalization import *
-from functions.store_GP import store_GP, load_GP
-from functions.read_Train_Data import read_Train_Data
-from GP_module.GP import GP
+from functions.store_gaussian_process import store_gaussian_process, load_gaussian_process
+from functions.read_train_data import read_train_data
+from gaussian_process_module.gaussian_process import GaussianProcess
 
 
-class TestGP(unittest.TestCase):  # inherits from unittest.testcase
+class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
 
-    def test_CreateRandomPT2(self):
-        num, den = create_random_PT2()
+    def test_create_random_pt2(self):
+        num, den = create_random_pt2()
 
         num_ref = np.zeros(2)
         den_ref = np.zeros(3)
@@ -24,7 +24,7 @@ class TestGP(unittest.TestCase):  # inherits from unittest.testcase
 
         self.assertAlmostEqual((num[1]/den[2]), 1)  # test dc_gain is zero
 
-    def test_DataNormalization(self):
+    def test_data_normalization(self):
 
         y = np.random.rand(100)
 
@@ -40,7 +40,7 @@ class TestGP(unittest.TestCase):  # inherits from unittest.testcase
         # with warnings.catch_warnings():  # only ignore warnings for this part
         #     warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
 
-        train_data = read_Train_Data()
+        train_data = read_train_data()
 
         np_array_ref = np.zeros(100)
 
@@ -56,10 +56,10 @@ class TestGP(unittest.TestCase):  # inherits from unittest.testcase
         # with warnings.catch_warnings():     # only ignore warnings for this part
         #     warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
 
-        test_GP = GP(np.array([-1, 0, 1]), np.array([1, 0, -1]), 1, 1, 1)
+        test_GP = GaussianProcess(np.array([[-1], [0], [1]]), np.array([[1], [0], [-1]]), 1, 1, 1)
 
-        store_GP(test_GP, 'unit_test')
-        loaded_GP = load_GP('unit_test')
+        store_gaussian_process(test_GP, 'unit_test')
+        loaded_GP = load_gaussian_process('unit_test')
 
         self.assertEqual(test_GP, loaded_GP)
 
@@ -69,7 +69,7 @@ class TestGP(unittest.TestCase):  # inherits from unittest.testcase
         # with warnings.catch_warnings():     # only ignore warnings for this part
         #    warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
 
-        test_GP = GP(np.array([[-1.0], [0.0], [1.0]]), np.array([[1], [0], [-1]]), 0.001, 1.0, 1.0)
+        test_GP = GaussianProcess(np.array([[-1.0], [0.0], [1.0]]), np.array([[1], [0], [-1]]), 0.001, 1.0, 1.0)
         x_test = np.array([1])
 
         test_result, __ = (test_GP.regression(x_test)) # 1 was also training point -> -1 expected
@@ -80,13 +80,17 @@ class TestGP(unittest.TestCase):  # inherits from unittest.testcase
         # with warnings.catch_warnings():     # only ignore warnings for this part
         #     warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
 
-        test_GP = GP(np.array([[-1, 2], [0, 1], [1, 3]]), np.array([[1], [0], [-1]]), 0.001, 1, 1)
+        test_GP = GaussianProcess(np.array([[-1, 2], [0, 1], [1, 3]]), np.array([[1], [0], [-1]]), 0.001, 1, 1)
         x_test = np.array([1, 3])
 
         test_result, __ = (test_GP.regression(x_test)) # 1 was also training point -> -1 expected
 
         self.assertAlmostEqual(float(test_result), -1, 3)
 
+        # test input validation
+        with self.assertRaises(ValueError):
+            GaussianProcess(np.array([[-1], [0], [1]]), np.array([[1], [0]]), 0.001, 1.0, 1.0) #  Value Error excepted when X has more datapoints than y
+            GaussianProcess(np.array([[-1], [0], [1]]), np.array([[1], [0]]), 0.001, 1.0, 1.0)
 
 if __name__ == '__main__':  # if this is main file, run unit test
     unittest.main()

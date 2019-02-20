@@ -1,0 +1,49 @@
+
+from functions.read_train_data import read_train_data
+from hyperparameter_optimization.random_search import RandomSearch
+from gaussian_process_module.gaussian_process import GaussianProcess
+from functions.test_gaussian_process import *
+from functions.store_gaussian_process import *
+from functions.score_gaussian_process import *
+
+# author: Samuel Wiertz, wiertzsamuel@gmail.com
+# date: 11.01.2019
+
+
+# read Train Data
+train_data = read_train_data()
+X_train = np.concatenate((train_data['num'], train_data['den']), axis=1)
+Y_train_P = train_data['P']
+Y_train_I = train_data['I']
+
+
+# get Parameters for Train Data
+P_Parameter_Search = RandomSearch([0, 0, 0], [0.1, 10, 10])
+I_Parameter_Search = RandomSearch([0, 0, 0], [0.1, 10, 10])
+
+if 0:
+    P_Parameter_Search.optimize_parameters(100, X_train, Y_train_P)
+    I_Parameter_Search.optimize_parameters(100, X_train, Y_train_I)
+
+    P_optimal_parameters = P_Parameter_Search.get_optimal_parameters()
+    I_optimal_parameters = I_Parameter_Search.get_optimal_parameters()
+
+    print(P_optimal_parameters)
+    print(I_optimal_parameters)
+else:
+    P_optimal_parameters = [0.067, 1.23, 0.528]
+    I_optimal_parameters = [0.078, 1.377, 0.469]
+
+
+# create Gaussian Processes for I-Part and P-Part
+GP_P = GaussianProcess(X_train, Y_train_P, P_optimal_parameters[0], P_optimal_parameters[1], P_optimal_parameters[2])
+GP_I = GaussianProcess(X_train, Y_train_I, I_optimal_parameters[0], I_optimal_parameters[1], I_optimal_parameters[2])
+store_gaussian_process(GP_P, 'test_P')
+store_gaussian_process(GP_I, 'test_I')
+# GP_P2 = load_gaussian_process('2693')
+# GP_I2 = load_gaussian_process('2693')
+
+rating = get_rating(GP_P, GP_I, 30, 1)
+print(rating)
+
+print('tbd: input validation wrapper for Grid Search')
