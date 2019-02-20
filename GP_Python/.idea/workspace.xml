@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cf84ebf-844e-47fd-9b88-65605da38504" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/EP_project_samuel_wiertz.py" beforeDir="false" afterPath="$PROJECT_DIR$/EP_project_samuel_wiertz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/create_random_pt2.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/create_random_pt2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/score_gaussian_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/score_gaussian_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_GPs/test_I" beforeDir="false" afterPath="$PROJECT_DIR$/saved_GPs/test_I" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_GPs/test_P" beforeDir="false" afterPath="$PROJECT_DIR$/saved_GPs/test_P" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_GPs/2693" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/EP_project_samuel_wiertz.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="49" column="63" lean-forward="true" selection-start-line="49" selection-start-column="63" selection-end-line="49" selection-end-column="63" />
+            <state relative-caret-position="288">
+              <caret line="45" column="14" lean-forward="true" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
               <folding>
                 <element signature="e#1#54#0" expanded="true" />
               </folding>
@@ -382,12 +377,12 @@
       <workItem from="1550149116194" duration="11201000" />
       <workItem from="1550225046037" duration="23534000" />
       <workItem from="1550649610079" duration="3918000" />
-      <workItem from="1550668059180" duration="5782000" />
+      <workItem from="1550668059180" duration="6273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108030000" />
+    <option name="totallyTimeSpent" value="108521000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -651,8 +646,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EP_project_samuel_wiertz.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="49" column="63" lean-forward="true" selection-start-line="49" selection-start-column="63" selection-end-line="49" selection-end-column="63" />
+        <state relative-caret-position="288">
+          <caret line="45" column="14" lean-forward="true" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
           <folding>
             <element signature="e#1#54#0" expanded="true" />
           </folding>
