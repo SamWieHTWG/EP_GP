@@ -1,12 +1,13 @@
 import numpy as np
+from functions import constants
 
 
 def create_random_pt2():
 
-    if np.random.rand() > 0.7:
+    if np.random.rand() > constants.PROB_FOR_OSCILLATING_SYSTEM:
 
-        real = (np.random.rand()-0.5) * 20
-        imag = (np.random.rand()) * 5
+        real = (np.random.rand()-0.5) * 2 * constants.MAX_REAL_PART
+        imag = (np.random.rand()) * constants.MAX_IMAGINARY_PART
 
         d_cont = np.zeros(3)
         d_cont[0] = 1
@@ -19,8 +20,8 @@ def create_random_pt2():
 
     else:
 
-        pole1 = (np.random.rand() - 0.5) * 20
-        pole2 = (np.random.rand() - 0.5) * 20
+        pole1 = (np.random.rand() - 0.5) * 2 * constants.MAX_REAL_PART
+        pole2 = (np.random.rand() - 0.5) * 2 * constants.MAX_REAL_PART
 
         d_cont = np.zeros(3)
         d_cont[0] = 1
