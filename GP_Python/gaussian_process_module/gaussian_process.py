@@ -8,16 +8,16 @@ from gaussian_process_module.check_inputs import validate_gaussian_process_regre
 class GaussianProcess:
 
     @validate_gaussian_process_initialization_inputs
-    def __init__(self, X_train, y_train, sig_n, l, sig_f):
+    def __init__(self, x_train, y_train, parameter_sig_n, parameter_l, parameter_sig_f):
         # tbd: Konstruktor anpassen an arg* aus Folien, z.B. ob Parameter gegeben
 
-        self.X_train = X_train
+        self.X_train = x_train
         self.y_train, self.y_mean, self.y_compression_fact = train_data_normalization(y_train)
-        self.sig_n = sig_n
-        self.sig_f = sig_f
-        self.l = l
+        self.parameter_sig_n = parameter_sig_n
+        self.parameter_sig_f = parameter_sig_f
+        self.parameter_l = parameter_l
 
-        input_shape = X_train.shape
+        input_shape = x_train.shape
         self.order = input_shape[0]
         self.k_XX = np.zeros([self.order, self.order])
         self.inv_Cov = np.zeros([self.order, self.order])
@@ -27,8 +27,8 @@ class GaussianProcess:
     @validate_gaussian_process_regression_inputs
     def regression(self, x):
 
-        k_xX = squared_exponential_kernel(x, self.X_train, self.l, self.sig_f)
-        k_xx = squared_exponential_kernel(x, x, self.l, self.sig_f)
+        k_xX = squared_exponential_kernel(x, self.X_train, self.parameter_l, self.parameter_sig_f)
+        k_xx = squared_exponential_kernel(x, x, self.parameter_l, self.parameter_sig_f)
 
         y_est_normed = np.matmul(k_xX, np.matmul(self.inv_Cov, self.y_train))
         y_estimated = train_data_inv_normalization(y_est_normed, self.y_mean, self.y_compression_fact)
@@ -38,8 +38,8 @@ class GaussianProcess:
         return y_estimated, estimation_deviation
 
     def train(self):
-        self.k_XX = squared_exponential_kernel(self.X_train, self.X_train, self.l, self.sig_f)
-        self.inv_Cov = np.linalg.inv(self.k_XX + self.sig_n * self.sig_n * np.eye(self.order))
+        self.k_XX = squared_exponential_kernel(self.X_train, self.X_train, self.parameter_l, self.parameter_sig_f)
+        self.inv_Cov = np.linalg.inv(self.k_XX + self.parameter_sig_n * self.parameter_sig_n * np.eye(self.order))
 
         pass
 
@@ -59,7 +59,7 @@ if __name__ == '__main__':  # if this is main file, run fcn
     print(X)
     y = np.array([[-1], [0], [1]])
     print(y)
-    gp = GaussianProcess(X_train=X, y_train=y, sig_n=0.1, l=1, sig_f=1)
+    gp = GaussianProcess(x_train=X, y_train=y, parameter_sig_n=0.1, parameter_l=1, parameter_sig_f=1)
     y, C = gp.regression(np.array([[0.5, 0.5]]))
     print(y)
     print(C)

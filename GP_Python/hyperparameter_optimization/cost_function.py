@@ -2,9 +2,9 @@ from gaussian_process_module.squared_exponential_kernel import  squared_exponent
 import numpy as np
 
 
-def likelihood_cost_function(X, Y, length, sig_f, l, sig_n):
+def likelihood_cost_function(x, y, length, sig_f, l, sig_n):
 
-    k_xx = squared_exponential_kernel(X, X, l, sig_f)
+    k_xx = squared_exponential_kernel(x, x, l, sig_f)
     k_y = k_xx + sig_n * sig_n * np.eye(length)
     inv_k_y = np.linalg.inv(k_y)
 
@@ -12,7 +12,7 @@ def likelihood_cost_function(X, Y, length, sig_f, l, sig_n):
         return -1 * np.Inf
     else:
 
-        term1 = -1/2 * np.matmul(np.transpose(Y), np.matmul(inv_k_y, Y))
+        term1 = -1/2 * np.matmul(np.transpose(y), np.matmul(inv_k_y, y))
         term2 = -1/2 * np.log(np.linalg.det(k_y))
         term3 = -1*length/2 * np.log(2*np.pi)
 

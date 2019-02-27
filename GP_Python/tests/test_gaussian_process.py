@@ -1,10 +1,12 @@
 import unittest
+from functions.constants import *
 import warnings
 import numpy as np
 from functions.create_random_pt2 import create_random_pt2
 from functions.data_normalization import *
 from functions.store_gaussian_process import store_gaussian_process, load_gaussian_process
 from functions.read_train_data import read_train_data
+from hyperparameter_optimization.random_search import RandomSearch
 from gaussian_process_module.gaussian_process import GaussianProcess
 
 
@@ -35,7 +37,7 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
 
         self.assertAlmostEqual(np.max(np.abs(y_normed)), 1.0, places=4)  # test max abs == 1 ( stretching correct )
 
-    def test_read_Train_Data(self):
+    def test_read_train_data(self):
 
         # with warnings.catch_warnings():  # only ignore warnings for this part
         #     warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
@@ -51,7 +53,7 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
         assert type(X_train) == type(np_array_ref)
         assert type(Y_train_P) == type(np_array_ref) and type(Y_train_I) == type(np_array_ref)
 
-    def test_Store_Load_GP(self):
+    def test_store_load_gaussian_process(self):
 
         # with warnings.catch_warnings():     # only ignore warnings for this part
         #     warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
@@ -63,7 +65,7 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
 
         self.assertEqual(test_GP, loaded_GP)
 
-    def test_GP(self):
+    def test_gaussian_process(self):
 
         # test 1D regression
         # with warnings.catch_warnings():     # only ignore warnings for this part
@@ -91,6 +93,26 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
         with self.assertRaises(ValueError):
             GaussianProcess(np.array([[-1], [0], [1]]), np.array([[1], [0]]), 0.001, 1.0, 1.0) #  Value Error excepted when X has more datapoints than y
             GaussianProcess(np.array([[-1], [0], [1]]), np.array([[1], [0]]), 0.001, 1.0, 1.0)
+
+    def test_random_search(self):
+
+
+        # test lb < ub validation
+        ub = HYPERPARAMETER_UPPER_BOUND
+        lb = [0, 0, 0]
+        lb[0] = ub[0]+1
+
+        with self.assertRaises(ValueError):
+            RandomSearch(lower_bound=lb, upper_bound=ub)
+
+        random_search = RandomSearch(lower_bound=HYPERPARAMETER_LOWER_BOUND,
+                                     upper_bound=HYPERPARAMETER_UPPER_BOUND)
+
+        # test Value Error when length u != y
+        with self.assertRaises(ValueError):
+            random_search.optimize_parameters(10, np.array([[-1], [0], [1]]),
+                                              np.array([[1], [0]]))
+
 
 if __name__ == '__main__':  # if this is main file, run unit test
     unittest.main()

@@ -1,10 +1,15 @@
 import numpy as np
 from hyperparameter_optimization.cost_function import likelihood_cost_function
 from functions.data_normalization import *
+from hyperparameter_optimization.check_random_search_inputs \
+    import validate_random_search_init_inputs
+from hyperparameter_optimization.check_random_search_inputs \
+    import validate_optimize_parameters_inputs
 
 
 class RandomSearch:
 
+    @validate_random_search_init_inputs
     def __init__(self, lower_bound, upper_bound):
 
         self.lb_sig_n = lower_bound[0]
@@ -19,6 +24,7 @@ class RandomSearch:
         self.opt_parameters = np.zeros((1, 3))
         pass
 
+    @validate_optimize_parameters_inputs
     def optimize_parameters(self, num_iterations, optimization_data_x, optimization_data_y_unnormed):
 
         optimization_data_y, _, _ = train_data_normalization(optimization_data_y_unnormed)
