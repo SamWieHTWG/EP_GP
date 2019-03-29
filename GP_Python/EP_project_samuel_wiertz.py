@@ -55,7 +55,7 @@ GP_I = GaussianProcess(x_train, y_train_i_gain, i_gain_optimal_parameters[0],
 GP_P2 = load_gaussian_process('2693_P')
 GP_I2 = load_gaussian_process('2693_I')
 
-rating = get_rating(GP_P2, GP_I2, NUMBER_OF_RATING_ITERATIONS, 1)
+rating = get_rating(GP_P2, GP_I2, 30, 1)
 print('\nabsolute rating = ')
 print(rating)
 

@@ -5,6 +5,8 @@ import numpy as np
 def validate_gaussian_process_initialization_inputs(func):
 
     def func_wrapper(self, x_train, y_train, sig_n, l, sig_f):
+        """Test Documentation - Doxygen
+          """
 
         if sig_n < 0 or sig_f < 0 or l < 0:
             raise ValueError('all Hyperparameters have to be positive'.format(func.__name__))
