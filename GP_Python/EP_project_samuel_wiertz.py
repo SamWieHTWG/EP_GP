@@ -10,8 +10,8 @@ from functions.constants import *
 # date: 11.01.2019
 
 
-# read Train Data
-train_data = read_train_data()
+# read train data
+train_data = read_train_data('data_2693')
 x_train = np.concatenate((train_data['num'], train_data['den']), axis=1)
 y_train_p_gain = train_data['P']
 y_train_i_gain = train_data['I']
@@ -50,8 +50,9 @@ GP_I = GaussianProcess(x_train, y_train_i_gain, i_gain_optimal_parameters[0],
                        i_gain_optimal_parameters[1], i_gain_optimal_parameters[2])
 
 
-#store_gaussian_process(gaussian_process=GP_P, filename='2693_P')
-#store_gaussian_process(gaussian_process=GP_I, filename='2693_I')
+store_gaussian_process(gaussian_process=GP_P, filename='2693_P')
+store_gaussian_process(gaussian_process=GP_I, filename='2693_I')
+
 GP_P2 = load_gaussian_process('2693_P')
 GP_I2 = load_gaussian_process('2693_I')
 

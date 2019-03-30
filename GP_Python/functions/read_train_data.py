@@ -2,12 +2,22 @@ import numpy as np
 import scipy.io as io
 
 
-def read_train_data():
+def read_train_data(filename):
+    """!
+    Reads Data as Matfile
+
+    @param filename str: filename of mat file without .mat extension
+
+
+    @return np matrix: train data as matrix, each line is one train data set
+    """
 
     #filename = '/home/samuel/Documents/EP_GP/GP_Python/train_data/data_2693.mat'
-    filename = '/home/samuel/Documents/EP_GP/GP_Python/train_data/data_254.mat'
+    path = '/home/samuel/Documents/EP_GP/GP_Python/train_data/'
 
-    mat_data_dict = io.loadmat(filename)
+    file = path + filename + '.mat'
+
+    mat_data_dict = io.loadmat(file)
 
     mat_data = np.array(mat_data_dict['data'])
 

@@ -1,0 +1,40 @@
+\hypertarget{namespacecost__function}{}\doxysection{cost\+\_\+function Namespace Reference}
+\label{namespacecost__function}\index{cost\_function@{cost\_function}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecost__function_a737d34372288a45d53153f3700cbe9a0}{likelihood\+\_\+cost\+\_\+function}} (x, y, length, sig\+\_\+f, l, sig\+\_\+n)
+\begin{DoxyCompactList}\small\item\em Computes the marginal likelihood of the given hyperparameters and input output data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecost__function_a737d34372288a45d53153f3700cbe9a0}\label{namespacecost__function_a737d34372288a45d53153f3700cbe9a0}} 
+\index{cost\_function@{cost\_function}!likelihood\_cost\_function@{likelihood\_cost\_function}}
+\index{likelihood\_cost\_function@{likelihood\_cost\_function}!cost\_function@{cost\_function}}
+\doxysubsubsection{\texorpdfstring{likelihood\_cost\_function()}{likelihood\_cost\_function()}}
+{\footnotesize\ttfamily def cost\+\_\+function.\+likelihood\+\_\+cost\+\_\+function (\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{length,  }\item[{}]{sig\+\_\+f,  }\item[{}]{l,  }\item[{}]{sig\+\_\+n }\end{DoxyParamCaption})}
+
+
+
+Computes the marginal likelihood of the given hyperparameters and input output data. 
+
+This means the probability of the given parameters for the input-\/output data is determined. Maximizing this likelihood leads to the most likely parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & numpy\+\_\+matrix\+: input data \\
+\hline
+{\em y} & numpy\+\_\+matrix\+: output data \\
+\hline
+{\em length} & int\+: length of data set \\
+\hline
+{\em sig\+\_\+f} & float\+: parameter defining the process noise \\
+\hline
+{\em l} & float\+: parameter defining the length scale \\
+\hline
+{\em sig\+\_\+n} & float\+: parameter defining the output noise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: probability of the given parameter for the input-\/output data 
+\end{DoxyReturn}

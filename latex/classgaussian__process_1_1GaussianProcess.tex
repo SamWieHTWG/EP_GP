@@ -1,0 +1,189 @@
+\hypertarget{classgaussian__process_1_1GaussianProcess}{}\doxysection{gaussian\+\_\+process.\+Gaussian\+Process Class Reference}
+\label{classgaussian__process_1_1GaussianProcess}\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a173f1c65eb97f470427f6b5122986f99}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, x\+\_\+train, y\+\_\+train, \mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_ae63fac9dc0ca2edbc2a095071a05bada}{parameter\+\_\+sig\+\_\+n}}, \mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a0558f96a088499878886e85654806a51}{parameter\+\_\+l}}, \mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a790c50f0366638dafadfa5e94728c8b2}{parameter\+\_\+sig\+\_\+f}})
+\begin{DoxyCompactList}\small\item\em Creates Gaussian Process object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a08b34b540c53c0ca5fc7f72b8a2525e5}{regression}} (self, x)
+\begin{DoxyCompactList}\small\item\em data regression on given point \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a116fecb81d2840cc9d95cad2676d38b9}{train}} (self)
+\begin{DoxyCompactList}\small\item\em trains process by using train data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_ab02f7987f1a0ff4c6682c7dc0c002ec2}{\+\_\+\+\_\+eq\+\_\+\+\_\+}} (self, other)
+\begin{DoxyCompactList}\small\item\em Compares two given Gaussian Processes. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_ac6f4b36a9c350c69daef4ee70cb3a7f3}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a595de98ea09a76ad0453f489556d9bfc}{X\+\_\+train}}
+\item 
+\mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a7f8dfe0186c2e85d288e890912deafc3}{y\+\_\+compression\+\_\+fact}}
+\item 
+\mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_ae63fac9dc0ca2edbc2a095071a05bada}{parameter\+\_\+sig\+\_\+n}}
+\begin{DoxyCompactList}\small\item\em Hyperparameter defining output noise. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a790c50f0366638dafadfa5e94728c8b2}{parameter\+\_\+sig\+\_\+f}}
+\begin{DoxyCompactList}\small\item\em Hyperparameter defining process noise. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a0558f96a088499878886e85654806a51}{parameter\+\_\+l}}
+\begin{DoxyCompactList}\small\item\em Hyperparameter defining length scale. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a9028b9e7651b751bc181de8f4d8372b1}{order}}
+\item 
+\mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a8c853535d8ccb25d8d1519e0086fc86f}{k\+\_\+\+XX}}
+\begin{DoxyCompactList}\small\item\em characteristic covariance matrix \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgaussian__process_1_1GaussianProcess_a711d8dae0b690fb2fa87632cb66fa873}{inv\+\_\+\+Cov}}
+\begin{DoxyCompactList}\small\item\em precomputed inverse of characteristic covariance matrix \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_a173f1c65eb97f470427f6b5122986f99}\label{classgaussian__process_1_1GaussianProcess_a173f1c65eb97f470427f6b5122986f99}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def gaussian\+\_\+process.\+Gaussian\+Process.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x\+\_\+train,  }\item[{}]{y\+\_\+train,  }\item[{}]{parameter\+\_\+sig\+\_\+n,  }\item[{}]{parameter\+\_\+l,  }\item[{}]{parameter\+\_\+sig\+\_\+f }\end{DoxyParamCaption})}
+
+
+
+Creates Gaussian Process object. 
+
+Gaussian Process Objects are used for data regression. They are defined by there Hyperparameters and the data used to train the process. See \href{http://www.gaussianprocess.org/gpml/}{\texttt{ http\+://www.\+gaussianprocess.\+org/gpml/}} for further informations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+train} & numpy\+\_\+matrix\+: Input of Traning Data \\
+\hline
+{\em y\+\_\+train} & numpy\+\_\+matrix\+: Output of Training Data \\
+\hline
+{\em parameter\+\_\+sig\+\_\+n} & float\+: Hyperparameter defining output noise \\
+\hline
+{\em parameter\+\_\+l} & float\+: Hyperparameter defining length scale \\
+\hline
+{\em parameter\+\_\+sig\+\_\+f} & float\+: Hyperparameter defining process noise \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_ab02f7987f1a0ff4c6682c7dc0c002ec2}\label{classgaussian__process_1_1GaussianProcess_ab02f7987f1a0ff4c6682c7dc0c002ec2}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!\_\_eq\_\_@{\_\_eq\_\_}}
+\index{\_\_eq\_\_@{\_\_eq\_\_}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{\_\_eq\_\_()}{\_\_eq\_\_()}}
+{\footnotesize\ttfamily def gaussian\+\_\+process.\+Gaussian\+Process.\+\_\+\+\_\+eq\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Compares two given Gaussian Processes. 
+
+\begin{DoxyReturn}{Returns}
+boolean\+: true, if given processes are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_ac6f4b36a9c350c69daef4ee70cb3a7f3}\label{classgaussian__process_1_1GaussianProcess_ac6f4b36a9c350c69daef4ee70cb3a7f3}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def gaussian\+\_\+process.\+Gaussian\+Process.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_a08b34b540c53c0ca5fc7f72b8a2525e5}\label{classgaussian__process_1_1GaussianProcess_a08b34b540c53c0ca5fc7f72b8a2525e5}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!regression@{regression}}
+\index{regression@{regression}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{regression()}{regression()}}
+{\footnotesize\ttfamily def gaussian\+\_\+process.\+Gaussian\+Process.\+regression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+data regression on given point 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em x} & numpy\+\_\+matrix\+: given input for data regression \\
+\hline
+\mbox{\texttt{ out}}  & {\em y\+\_\+estimated} & estimated y-\/value to input \\
+\hline
+\mbox{\texttt{ out}}  & {\em estimation\+\_\+deviation} & deviation/ probability of estimated value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_a116fecb81d2840cc9d95cad2676d38b9}\label{classgaussian__process_1_1GaussianProcess_a116fecb81d2840cc9d95cad2676d38b9}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!train@{train}}
+\index{train@{train}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily def gaussian\+\_\+process.\+Gaussian\+Process.\+train (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+trains process by using train data. 
+
+Result is stored in characteristic matrices k\+\_\+\+XX, inv\+\_\+\+Cov 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_a711d8dae0b690fb2fa87632cb66fa873}\label{classgaussian__process_1_1GaussianProcess_a711d8dae0b690fb2fa87632cb66fa873}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!inv\_Cov@{inv\_Cov}}
+\index{inv\_Cov@{inv\_Cov}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{inv\_Cov}{inv\_Cov}}
+{\footnotesize\ttfamily gaussian\+\_\+process.\+Gaussian\+Process.\+inv\+\_\+\+Cov}
+
+
+
+precomputed inverse of characteristic covariance matrix 
+
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_a8c853535d8ccb25d8d1519e0086fc86f}\label{classgaussian__process_1_1GaussianProcess_a8c853535d8ccb25d8d1519e0086fc86f}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!k\_XX@{k\_XX}}
+\index{k\_XX@{k\_XX}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{k\_XX}{k\_XX}}
+{\footnotesize\ttfamily gaussian\+\_\+process.\+Gaussian\+Process.\+k\+\_\+\+XX}
+
+
+
+characteristic covariance matrix 
+
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_a9028b9e7651b751bc181de8f4d8372b1}\label{classgaussian__process_1_1GaussianProcess_a9028b9e7651b751bc181de8f4d8372b1}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!order@{order}}
+\index{order@{order}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{order}{order}}
+{\footnotesize\ttfamily gaussian\+\_\+process.\+Gaussian\+Process.\+order}
+
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_a0558f96a088499878886e85654806a51}\label{classgaussian__process_1_1GaussianProcess_a0558f96a088499878886e85654806a51}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!parameter\_l@{parameter\_l}}
+\index{parameter\_l@{parameter\_l}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{parameter\_l}{parameter\_l}}
+{\footnotesize\ttfamily gaussian\+\_\+process.\+Gaussian\+Process.\+parameter\+\_\+l}
+
+
+
+Hyperparameter defining length scale. 
+
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_a790c50f0366638dafadfa5e94728c8b2}\label{classgaussian__process_1_1GaussianProcess_a790c50f0366638dafadfa5e94728c8b2}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!parameter\_sig\_f@{parameter\_sig\_f}}
+\index{parameter\_sig\_f@{parameter\_sig\_f}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{parameter\_sig\_f}{parameter\_sig\_f}}
+{\footnotesize\ttfamily gaussian\+\_\+process.\+Gaussian\+Process.\+parameter\+\_\+sig\+\_\+f}
+
+
+
+Hyperparameter defining process noise. 
+
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_ae63fac9dc0ca2edbc2a095071a05bada}\label{classgaussian__process_1_1GaussianProcess_ae63fac9dc0ca2edbc2a095071a05bada}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!parameter\_sig\_n@{parameter\_sig\_n}}
+\index{parameter\_sig\_n@{parameter\_sig\_n}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{parameter\_sig\_n}{parameter\_sig\_n}}
+{\footnotesize\ttfamily gaussian\+\_\+process.\+Gaussian\+Process.\+parameter\+\_\+sig\+\_\+n}
+
+
+
+Hyperparameter defining output noise. 
+
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_a595de98ea09a76ad0453f489556d9bfc}\label{classgaussian__process_1_1GaussianProcess_a595de98ea09a76ad0453f489556d9bfc}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!X\_train@{X\_train}}
+\index{X\_train@{X\_train}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{X\_train}{X\_train}}
+{\footnotesize\ttfamily gaussian\+\_\+process.\+Gaussian\+Process.\+X\+\_\+train}
+
+\mbox{\Hypertarget{classgaussian__process_1_1GaussianProcess_a7f8dfe0186c2e85d288e890912deafc3}\label{classgaussian__process_1_1GaussianProcess_a7f8dfe0186c2e85d288e890912deafc3}} 
+\index{gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}!y\_compression\_fact@{y\_compression\_fact}}
+\index{y\_compression\_fact@{y\_compression\_fact}!gaussian\_process.GaussianProcess@{gaussian\_process.GaussianProcess}}
+\doxysubsubsection{\texorpdfstring{y\_compression\_fact}{y\_compression\_fact}}
+{\footnotesize\ttfamily gaussian\+\_\+process.\+Gaussian\+Process.\+y\+\_\+compression\+\_\+fact}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+G\+P\+\_\+\+Python/gaussian\+\_\+process\+\_\+module/\mbox{\hyperlink{gaussian__process_8py}{gaussian\+\_\+process.\+py}}\end{DoxyCompactItemize}

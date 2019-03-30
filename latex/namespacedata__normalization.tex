@@ -1,0 +1,52 @@
+\hypertarget{namespacedata__normalization}{}\doxysection{data\+\_\+normalization Namespace Reference}
+\label{namespacedata__normalization}\index{data\_normalization@{data\_normalization}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedata__normalization_a5d67cb9ac5486318cb42ad7812093b5c}{train\+\_\+data\+\_\+normalization}} (y\+\_\+data)
+\begin{DoxyCompactList}\small\item\em remove mean, span data between -\/1 and 1 \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacedata__normalization_aa5f08fc0597a2e6b71468a1ad938b90b}{train\+\_\+data\+\_\+inv\+\_\+normalization}} (y\+\_\+normed, y\+\_\+mean, y\+\_\+compression\+\_\+factor)
+\begin{DoxyCompactList}\small\item\em inverse of data normalization \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedata__normalization_aa5f08fc0597a2e6b71468a1ad938b90b}\label{namespacedata__normalization_aa5f08fc0597a2e6b71468a1ad938b90b}} 
+\index{data\_normalization@{data\_normalization}!train\_data\_inv\_normalization@{train\_data\_inv\_normalization}}
+\index{train\_data\_inv\_normalization@{train\_data\_inv\_normalization}!data\_normalization@{data\_normalization}}
+\doxysubsubsection{\texorpdfstring{train\_data\_inv\_normalization()}{train\_data\_inv\_normalization()}}
+{\footnotesize\ttfamily def data\+\_\+normalization.\+train\+\_\+data\+\_\+inv\+\_\+normalization (\begin{DoxyParamCaption}\item[{}]{y\+\_\+normed,  }\item[{}]{y\+\_\+mean,  }\item[{}]{y\+\_\+compression\+\_\+factor }\end{DoxyParamCaption})}
+
+
+
+inverse of data normalization 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y\+\_\+normed} & numpy\+\_\+matrix\+: normed output data \\
+\hline
+{\em y\+\_\+mean} & float\+: mean of previous normalization \\
+\hline
+{\em y\+\_\+compression\+\_\+factor} & float\+: compression factor of previous normal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: numpy\+\_\+matrix unnormed data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacedata__normalization_a5d67cb9ac5486318cb42ad7812093b5c}\label{namespacedata__normalization_a5d67cb9ac5486318cb42ad7812093b5c}} 
+\index{data\_normalization@{data\_normalization}!train\_data\_normalization@{train\_data\_normalization}}
+\index{train\_data\_normalization@{train\_data\_normalization}!data\_normalization@{data\_normalization}}
+\doxysubsubsection{\texorpdfstring{train\_data\_normalization()}{train\_data\_normalization()}}
+{\footnotesize\ttfamily def data\+\_\+normalization.\+train\+\_\+data\+\_\+normalization (\begin{DoxyParamCaption}\item[{}]{y\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+remove mean, span data between -\/1 and 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y\+\_\+data} & numpy\+\_\+matrix\+: output data to be normed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: numpy\+\_\+matrix\+: normed output data 
+\end{DoxyReturn}

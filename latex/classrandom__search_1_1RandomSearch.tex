@@ -1,0 +1,129 @@
+\hypertarget{classrandom__search_1_1RandomSearch}{}\doxysection{random\+\_\+search.\+Random\+Search Class Reference}
+\label{classrandom__search_1_1RandomSearch}\index{random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrandom__search_1_1RandomSearch_a60ba9fe7789a917ed70d9dbd4209b21c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, lower\+\_\+bound, upper\+\_\+bound)
+\begin{DoxyCompactList}\small\item\em creates a random search object, which determines the most likely hyperparameters regarding given input-\/output data by generating a huge number of random hyperparameter sets and returning the most likely parameters. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classrandom__search_1_1RandomSearch_aee1f875607eae45d90b8322dabca2340}{optimize\+\_\+parameters}} (self, num\+\_\+iterations, optimization\+\_\+data\+\_\+x, optimization\+\_\+data\+\_\+y\+\_\+unnormed)
+\begin{DoxyCompactList}\small\item\em This function generates a huge number of random parameter sets and determines the most likely parameters regarding the given input/output data by using the likelihood function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classrandom__search_1_1RandomSearch_a6d51f5775d5467d6c4608aca70789824}{get\+\_\+optimal\+\_\+parameters}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrandom__search_1_1RandomSearch_af38ae16855ef8156bde160d1d271fd02}{lb\+\_\+sig\+\_\+n}}
+\item 
+\mbox{\hyperlink{classrandom__search_1_1RandomSearch_a26d50d347c668c768b878efefe732d34}{ub\+\_\+sig\+\_\+n}}
+\item 
+\mbox{\hyperlink{classrandom__search_1_1RandomSearch_a3024db5db6cc35b52dd7fc6f5be9a274}{lb\+\_\+l}}
+\item 
+\mbox{\hyperlink{classrandom__search_1_1RandomSearch_a5915a35bd663e259408d36251a2b2907}{ub\+\_\+l}}
+\item 
+\mbox{\hyperlink{classrandom__search_1_1RandomSearch_a2551833f74ba234b8c7dc07d1bd5bdd3}{lb\+\_\+sig\+\_\+f}}
+\item 
+\mbox{\hyperlink{classrandom__search_1_1RandomSearch_aabefc71b632c8afdcddd6955f891c9cf}{ub\+\_\+sig\+\_\+f}}
+\item 
+\mbox{\hyperlink{classrandom__search_1_1RandomSearch_a5553bccd0ac88783380aecd74629c2c9}{opt\+\_\+parameters}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrandom__search_1_1RandomSearch_a60ba9fe7789a917ed70d9dbd4209b21c}\label{classrandom__search_1_1RandomSearch_a60ba9fe7789a917ed70d9dbd4209b21c}} 
+\index{random\_search.RandomSearch@{random\_search.RandomSearch}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def random\+\_\+search.\+Random\+Search.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lower\+\_\+bound,  }\item[{}]{upper\+\_\+bound }\end{DoxyParamCaption})}
+
+
+
+creates a random search object, which determines the most likely hyperparameters regarding given input-\/output data by generating a huge number of random hyperparameter sets and returning the most likely parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lower\+\_\+bound} & list\+: defines the lower bound for each hyperparameter, at which samples are generated. \\
+\hline
+{\em upper\+\_\+bound} & list\+: defines the upper bound for each hyperparameter, at which samples are generated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrandom__search_1_1RandomSearch_a6d51f5775d5467d6c4608aca70789824}\label{classrandom__search_1_1RandomSearch_a6d51f5775d5467d6c4608aca70789824}} 
+\index{random\_search.RandomSearch@{random\_search.RandomSearch}!get\_optimal\_parameters@{get\_optimal\_parameters}}
+\index{get\_optimal\_parameters@{get\_optimal\_parameters}!random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{get\_optimal\_parameters()}{get\_optimal\_parameters()}}
+{\footnotesize\ttfamily def random\+\_\+search.\+Random\+Search.\+get\+\_\+optimal\+\_\+parameters (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classrandom__search_1_1RandomSearch_aee1f875607eae45d90b8322dabca2340}\label{classrandom__search_1_1RandomSearch_aee1f875607eae45d90b8322dabca2340}} 
+\index{random\_search.RandomSearch@{random\_search.RandomSearch}!optimize\_parameters@{optimize\_parameters}}
+\index{optimize\_parameters@{optimize\_parameters}!random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{optimize\_parameters()}{optimize\_parameters()}}
+{\footnotesize\ttfamily def random\+\_\+search.\+Random\+Search.\+optimize\+\_\+parameters (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{num\+\_\+iterations,  }\item[{}]{optimization\+\_\+data\+\_\+x,  }\item[{}]{optimization\+\_\+data\+\_\+y\+\_\+unnormed }\end{DoxyParamCaption})}
+
+
+
+This function generates a huge number of random parameter sets and determines the most likely parameters regarding the given input/output data by using the likelihood function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+iterations} & int\+: number of random parameter samples \\
+\hline
+{\em optimization\+\_\+data\+\_\+x} & numpy\+\_\+matrix\+: input data \\
+\hline
+{\em optimization\+\_\+data\+\_\+y\+\_\+unnormed} & numpy\+\_\+matrix\+: unnormed output data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: list\+: most likely parameters 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrandom__search_1_1RandomSearch_a3024db5db6cc35b52dd7fc6f5be9a274}\label{classrandom__search_1_1RandomSearch_a3024db5db6cc35b52dd7fc6f5be9a274}} 
+\index{random\_search.RandomSearch@{random\_search.RandomSearch}!lb\_l@{lb\_l}}
+\index{lb\_l@{lb\_l}!random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{lb\_l}{lb\_l}}
+{\footnotesize\ttfamily random\+\_\+search.\+Random\+Search.\+lb\+\_\+l}
+
+\mbox{\Hypertarget{classrandom__search_1_1RandomSearch_a2551833f74ba234b8c7dc07d1bd5bdd3}\label{classrandom__search_1_1RandomSearch_a2551833f74ba234b8c7dc07d1bd5bdd3}} 
+\index{random\_search.RandomSearch@{random\_search.RandomSearch}!lb\_sig\_f@{lb\_sig\_f}}
+\index{lb\_sig\_f@{lb\_sig\_f}!random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{lb\_sig\_f}{lb\_sig\_f}}
+{\footnotesize\ttfamily random\+\_\+search.\+Random\+Search.\+lb\+\_\+sig\+\_\+f}
+
+\mbox{\Hypertarget{classrandom__search_1_1RandomSearch_af38ae16855ef8156bde160d1d271fd02}\label{classrandom__search_1_1RandomSearch_af38ae16855ef8156bde160d1d271fd02}} 
+\index{random\_search.RandomSearch@{random\_search.RandomSearch}!lb\_sig\_n@{lb\_sig\_n}}
+\index{lb\_sig\_n@{lb\_sig\_n}!random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{lb\_sig\_n}{lb\_sig\_n}}
+{\footnotesize\ttfamily random\+\_\+search.\+Random\+Search.\+lb\+\_\+sig\+\_\+n}
+
+\mbox{\Hypertarget{classrandom__search_1_1RandomSearch_a5553bccd0ac88783380aecd74629c2c9}\label{classrandom__search_1_1RandomSearch_a5553bccd0ac88783380aecd74629c2c9}} 
+\index{random\_search.RandomSearch@{random\_search.RandomSearch}!opt\_parameters@{opt\_parameters}}
+\index{opt\_parameters@{opt\_parameters}!random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{opt\_parameters}{opt\_parameters}}
+{\footnotesize\ttfamily random\+\_\+search.\+Random\+Search.\+opt\+\_\+parameters}
+
+\mbox{\Hypertarget{classrandom__search_1_1RandomSearch_a5915a35bd663e259408d36251a2b2907}\label{classrandom__search_1_1RandomSearch_a5915a35bd663e259408d36251a2b2907}} 
+\index{random\_search.RandomSearch@{random\_search.RandomSearch}!ub\_l@{ub\_l}}
+\index{ub\_l@{ub\_l}!random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{ub\_l}{ub\_l}}
+{\footnotesize\ttfamily random\+\_\+search.\+Random\+Search.\+ub\+\_\+l}
+
+\mbox{\Hypertarget{classrandom__search_1_1RandomSearch_aabefc71b632c8afdcddd6955f891c9cf}\label{classrandom__search_1_1RandomSearch_aabefc71b632c8afdcddd6955f891c9cf}} 
+\index{random\_search.RandomSearch@{random\_search.RandomSearch}!ub\_sig\_f@{ub\_sig\_f}}
+\index{ub\_sig\_f@{ub\_sig\_f}!random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{ub\_sig\_f}{ub\_sig\_f}}
+{\footnotesize\ttfamily random\+\_\+search.\+Random\+Search.\+ub\+\_\+sig\+\_\+f}
+
+\mbox{\Hypertarget{classrandom__search_1_1RandomSearch_a26d50d347c668c768b878efefe732d34}\label{classrandom__search_1_1RandomSearch_a26d50d347c668c768b878efefe732d34}} 
+\index{random\_search.RandomSearch@{random\_search.RandomSearch}!ub\_sig\_n@{ub\_sig\_n}}
+\index{ub\_sig\_n@{ub\_sig\_n}!random\_search.RandomSearch@{random\_search.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{ub\_sig\_n}{ub\_sig\_n}}
+{\footnotesize\ttfamily random\+\_\+search.\+Random\+Search.\+ub\+\_\+sig\+\_\+n}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+G\+P\+\_\+\+Python/hyperparameter\+\_\+optimization/\mbox{\hyperlink{random__search_8py}{random\+\_\+search.\+py}}\end{DoxyCompactItemize}

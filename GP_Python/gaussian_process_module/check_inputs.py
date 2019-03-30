@@ -5,8 +5,9 @@ import numpy as np
 def validate_gaussian_process_initialization_inputs(func):
 
     def func_wrapper(self, x_train, y_train, sig_n, l, sig_f):
-        """Test Documentation - Doxygen
-          """
+        """!
+        this wrapper is used as decorator for input validation of the gaussian process init function
+        """
 
         if sig_n < 0 or sig_f < 0 or l < 0:
             raise ValueError('all Hyperparameters have to be positive'.format(func.__name__))
@@ -33,7 +34,9 @@ def validate_gaussian_process_initialization_inputs(func):
 def validate_gaussian_process_regression_inputs(func):
 
     def func_wrapper(self, x):
-
+        """!
+        this wrapper is used as decorator for input validation of the gaussian process regression function
+        """
         if not isinstance(x, np.ndarray):
             raise TypeError('x has to be a numpy ndarray'.format(func.__name__))
 

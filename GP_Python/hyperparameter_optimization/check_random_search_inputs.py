@@ -4,7 +4,9 @@ import numpy as np
 def validate_random_search_init_inputs(func):
 
     def func_wrapper(self, lower_bound, upper_bound):
-
+        """!
+        this wrapper is used as decorator for input validation of the random search init function
+        """
         if lower_bound[0] > upper_bound[0]:
             raise ValueError('lower bound must be smaller than upper bound'.format(func.__name__))
 
@@ -23,6 +25,9 @@ def validate_random_search_init_inputs(func):
 def validate_optimize_parameters_inputs(func):
 
     def func_wrapper(self, num_iterations, optimization_data_x, optimization_data_y_unnormed):
+        """!
+        this wrapper is used as decorator for input validation of the random search parameter optimization function
+        """
 
         if optimization_data_x.ndim < 2:
             optimization_data_x = np.expand_dims(optimization_data_x, axis=0)

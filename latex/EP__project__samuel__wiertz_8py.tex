@@ -1,0 +1,42 @@
+\hypertarget{EP__project__samuel__wiertz_8py}{}\doxysection{G\+P\+\_\+\+Python/\+E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.py File Reference}
+\label{EP__project__samuel__wiertz_8py}\index{GP\_Python/EP\_project\_samuel\_wiertz.py@{GP\_Python/EP\_project\_samuel\_wiertz.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceEP__project__samuel__wiertz}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a9c116b2484f69abc50cd256570c0bfbd}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+train\+\_\+data}} = read\+\_\+train\+\_\+data(\textquotesingle{}data\+\_\+2693\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a0556a64b9975b73dee8e76dbc3a06623}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+x\+\_\+train}} = np.\+concatenate((train\+\_\+data\mbox{[}\textquotesingle{}num\textquotesingle{}\mbox{]}, train\+\_\+data\mbox{[}\textquotesingle{}den\textquotesingle{}\mbox{]}), axis=1)
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a622bcb18e1db838ca8febcd01ccd384b}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+y\+\_\+train\+\_\+p\+\_\+gain}} = train\+\_\+data\mbox{[}\textquotesingle{}P\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_aa8aac19c5507014c05e635228407051f}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+y\+\_\+train\+\_\+i\+\_\+gain}} = train\+\_\+data\mbox{[}\textquotesingle{}I\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a03c7c676d1da93b9b2fce0217f51d404}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+P\+\_\+\+Parameter\+\_\+\+Search}}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a1078944f732dc84283eb2cf299906403}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+I\+\_\+\+Parameter\+\_\+\+Search}}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a0c1e7f8b0a2c95792710d9ab4e36250f}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+num\+\_\+iterations}}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a3d326b92b6d1bf4c890a1fa039af4830}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+optimization\+\_\+data\+\_\+x}}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_aad17bbe7e7fc5fdcb69be87bd6ebbe23}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+optimization\+\_\+data\+\_\+y\+\_\+unnormed}}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a20938f6800a8c0cfe4bd1e948d3f5803}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+p\+\_\+gain\+\_\+optimal\+\_\+parameters}} = P\+\_\+\+Parameter\+\_\+\+Search.\+get\+\_\+optimal\+\_\+parameters()
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_ad90de70e4c85de232827413c349fcd2c}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+i\+\_\+gain\+\_\+optimal\+\_\+parameters}} = I\+\_\+\+Parameter\+\_\+\+Search.\+get\+\_\+optimal\+\_\+parameters()
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a75ad1db06909ac21d7bb16b56a2ca799}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+G\+P\+\_\+P}}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a86353b2e32013cd6bea63030a1d79cfc}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+G\+P\+\_\+I}}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a88ca819399651dc3c684c8665b9fca8f}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+G\+P\+\_\+\+P2}} = load\+\_\+gaussian\+\_\+process(\textquotesingle{}2693\+\_\+\+P\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a85b18032455a8c7135e8ba738d96f57d}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+G\+P\+\_\+\+I2}} = load\+\_\+gaussian\+\_\+process(\textquotesingle{}2693\+\_\+\+I\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a4bbef72351633cdd8a81560c64b0baaa}{E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+rating}} = get\+\_\+rating(G\+P\+\_\+\+P2, G\+P\+\_\+\+I2, 30, 1)
+\end{DoxyCompactItemize}

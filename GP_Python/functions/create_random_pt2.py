@@ -3,7 +3,11 @@ from functions import constants
 
 
 def create_random_pt2():
-
+    """!
+    Creates a random system of second order by defining random poles and zeros of the transfer function.
+    Oscillating Systems are using imaginary poles.
+    @return: polynomials of numerator/denomerator
+    """
     if np.random.rand() > constants.PROB_FOR_OSCILLATING_SYSTEM:
 
         real = (np.random.rand()-0.5) * 2 * constants.MAX_REAL_PART

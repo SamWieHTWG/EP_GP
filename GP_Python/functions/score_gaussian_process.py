@@ -8,7 +8,16 @@ import functions.constants
 
 
 def get_rating(gp_p, gp_i, num_iterations, do_plot):
+    """!
+    creates rating of the machine learning algorithm by comparing step responses of a pi-controller with fixed
+    parameters against a pi-controller with parameter estimated by the algorithm
 
+    @param gp_p: float: p-gain for the controller estimated by gaussian process
+    @param gp_i: float: i-gain for the controller estimated by gaussian process
+    @param num_iterations: int
+    @param do_plot: boolean: true - plot is created by using scipy
+    @return: float: score of rating
+    """
     sum_gp_better_performance = 0
 
     for index in range(num_iterations):
@@ -20,7 +29,16 @@ def get_rating(gp_p, gp_i, num_iterations, do_plot):
 
 
 def score_gaussian_process(gp_p, gp_i, do_plot):
+    """!
+    this function is used for the rating of the alogrithm. Therfore, a random system is generated, controller parameter
+    are estimated by the gaussian proccess and compared to a controller with fixed controller parameter by simulating
+    the step response
 
+    @param gp_p: gaussian process object for the p-gain
+    @param gp_i: gaussian process object for the i-gain
+    @param do_plot: boolean: true - plot is created by using scipy
+    @return: boolean: true, if gp gains a better performance
+    """
     error_gaussian_process = np.Inf
     while error_gaussian_process > constants.ERROR_LIMIT_FOR_STAB_SYSTEM:
 
@@ -66,7 +84,10 @@ def score_gaussian_process(gp_p, gp_i, do_plot):
 
 
 def step_response(p_gain, i_gain, num, den, num_of_values):
-    
+    """!
+    Simulates step response by using scipy.
+
+    """
     ol_num = np.convolve(num, np.squeeze([p_gain, i_gain]))
     ol_den = np.convolve(den, [1, 0])
     sys_num = ol_num

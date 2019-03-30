@@ -1,0 +1,72 @@
+\hypertarget{namespacescore__gaussian__process}{}\doxysection{score\+\_\+gaussian\+\_\+process Namespace Reference}
+\label{namespacescore__gaussian__process}\index{score\_gaussian\_process@{score\_gaussian\_process}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacescore__gaussian__process_ab9c7b399da5f9650689db58ad8cfb5b8}{get\+\_\+rating}} (gp\+\_\+p, gp\+\_\+i, num\+\_\+iterations, do\+\_\+plot)
+\begin{DoxyCompactList}\small\item\em creates rating of the machine learning algorithm by comparing step responses of a pi-\/controller with fixed parameters against a pi-\/controller with parameter estimated by the algorithm \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacescore__gaussian__process_adbf827be1d76dc0d0202dfd359f8cc29}{score\+\_\+gaussian\+\_\+process}} (gp\+\_\+p, gp\+\_\+i, do\+\_\+plot)
+\begin{DoxyCompactList}\small\item\em this function is used for the rating of the alogrithm. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacescore__gaussian__process_af34a02978930f5a424ef1a8e8259880a}{step\+\_\+response}} (p\+\_\+gain, i\+\_\+gain, num, den, num\+\_\+of\+\_\+values)
+\begin{DoxyCompactList}\small\item\em Simulates step response by using scipy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacescore__gaussian__process_ab9c7b399da5f9650689db58ad8cfb5b8}\label{namespacescore__gaussian__process_ab9c7b399da5f9650689db58ad8cfb5b8}} 
+\index{score\_gaussian\_process@{score\_gaussian\_process}!get\_rating@{get\_rating}}
+\index{get\_rating@{get\_rating}!score\_gaussian\_process@{score\_gaussian\_process}}
+\doxysubsubsection{\texorpdfstring{get\_rating()}{get\_rating()}}
+{\footnotesize\ttfamily def score\+\_\+gaussian\+\_\+process.\+get\+\_\+rating (\begin{DoxyParamCaption}\item[{}]{gp\+\_\+p,  }\item[{}]{gp\+\_\+i,  }\item[{}]{num\+\_\+iterations,  }\item[{}]{do\+\_\+plot }\end{DoxyParamCaption})}
+
+
+
+creates rating of the machine learning algorithm by comparing step responses of a pi-\/controller with fixed parameters against a pi-\/controller with parameter estimated by the algorithm 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gp\+\_\+p} & float\+: p-\/gain for the controller estimated by gaussian process \\
+\hline
+{\em gp\+\_\+i} & float\+: i-\/gain for the controller estimated by gaussian process \\
+\hline
+{\em num\+\_\+iterations} & int \\
+\hline
+{\em do\+\_\+plot} & boolean\+: true -\/ plot is created by using scipy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: float\+: score of rating 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacescore__gaussian__process_adbf827be1d76dc0d0202dfd359f8cc29}\label{namespacescore__gaussian__process_adbf827be1d76dc0d0202dfd359f8cc29}} 
+\index{score\_gaussian\_process@{score\_gaussian\_process}!score\_gaussian\_process@{score\_gaussian\_process}}
+\index{score\_gaussian\_process@{score\_gaussian\_process}!score\_gaussian\_process@{score\_gaussian\_process}}
+\doxysubsubsection{\texorpdfstring{score\_gaussian\_process()}{score\_gaussian\_process()}}
+{\footnotesize\ttfamily def score\+\_\+gaussian\+\_\+process.\+score\+\_\+gaussian\+\_\+process (\begin{DoxyParamCaption}\item[{}]{gp\+\_\+p,  }\item[{}]{gp\+\_\+i,  }\item[{}]{do\+\_\+plot }\end{DoxyParamCaption})}
+
+
+
+this function is used for the rating of the alogrithm. 
+
+Therfore, a random system is generated, controller parameter are estimated by the gaussian proccess and compared to a controller with fixed controller parameter by simulating the step response
+
+
+\begin{DoxyParams}{Parameters}
+{\em gp\+\_\+p} & gaussian process object for the p-\/gain \\
+\hline
+{\em gp\+\_\+i} & gaussian process object for the i-\/gain \\
+\hline
+{\em do\+\_\+plot} & boolean\+: true -\/ plot is created by using scipy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: boolean\+: true, if gp gains a better performance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacescore__gaussian__process_af34a02978930f5a424ef1a8e8259880a}\label{namespacescore__gaussian__process_af34a02978930f5a424ef1a8e8259880a}} 
+\index{score\_gaussian\_process@{score\_gaussian\_process}!step\_response@{step\_response}}
+\index{step\_response@{step\_response}!score\_gaussian\_process@{score\_gaussian\_process}}
+\doxysubsubsection{\texorpdfstring{step\_response()}{step\_response()}}
+{\footnotesize\ttfamily def score\+\_\+gaussian\+\_\+process.\+step\+\_\+response (\begin{DoxyParamCaption}\item[{}]{p\+\_\+gain,  }\item[{}]{i\+\_\+gain,  }\item[{}]{num,  }\item[{}]{den,  }\item[{}]{num\+\_\+of\+\_\+values }\end{DoxyParamCaption})}
+
+
+
+Simulates step response by using scipy. 
+
