@@ -64,8 +64,8 @@ def score_gaussian_process(gp_p, gp_i, do_plot):
             error_gaussian_process = np.sum(np.multiply((y_gp-target_value), (y_gp-target_value)))
             err_ref = np.sum(np.multiply((y_ref-target_value), (y_ref-target_value)))
 
-    print(error_gaussian_process)
-    print(err_ref)
+    print('\nerror of GP-est:', error_gaussian_process)
+    print('error of fixed parameters:', err_ref)
 
     if do_plot:
 
