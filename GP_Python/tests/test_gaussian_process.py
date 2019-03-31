@@ -42,7 +42,7 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
         # with warnings.catch_warnings():  # only ignore warnings for this part
         #     warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
 
-        train_data = read_train_data()
+        train_data = read_train_data('data_254')
 
         np_array_ref = np.zeros(100)
 
