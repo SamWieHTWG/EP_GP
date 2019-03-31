@@ -11,7 +11,7 @@ from functions.constants import *
 
 
 # read train data
-train_data = read_train_data('data_2693')
+train_data = read_train_data('data_254')
 x_train = np.concatenate((train_data['num'], train_data['den']), axis=1)
 y_train_p_gain = train_data['P']
 y_train_i_gain = train_data['I']

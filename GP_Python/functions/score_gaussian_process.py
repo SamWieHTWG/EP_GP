@@ -69,9 +69,13 @@ def score_gaussian_process(gp_p, gp_i, do_plot):
 
     if do_plot:
 
-        p.plot(t_gp, y_gp)
-        p.plot(t_ref, y_ref)
+
+        y_step = np.append(np.zeros(1), np.ones(constants.NUMBER_OF_TIME_POINTS-1))
+        p.plot(t_gp, y_gp, label="Parameter estimated by Gaussian Process")
+        p.plot(t_ref, y_ref, label="P-Gain = 1, I-Gain = 10")
+        p.plot(t_ref, y_step, label="Reference")
         # p.legend('Gaussian Process', 'P = 1, I = 10')
+        p.legend()
         p.show()
         time.sleep(2)
 

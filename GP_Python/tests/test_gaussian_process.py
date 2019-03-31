@@ -12,7 +12,19 @@ from gaussian_process_module.gaussian_process import GaussianProcess
 
 class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
 
+    def test_data_normalization(self):
+
+        y = np.random.rand(100)
+
+        y_normed, y_mean, y_stretch_fact = train_data_normalization(y)
+        y_renormed = train_data_inv_normalization(y_normed, y_mean, y_stretch_fact)
+
+        self.assertAlmostEqual(np.max(np.abs(y-y_renormed)), 0, places=4)  # test norm error after renorm
+
+        self.assertAlmostEqual(np.max(np.abs(y_normed)), 1.0, places=4)  # test max abs == 1 ( stretching correct )
+
     def test_create_random_pt2(self):
+
         num, den = create_random_pt2()
 
         num_ref = np.zeros(2)
@@ -26,16 +38,6 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
 
         self.assertAlmostEqual((num[1]/den[2]), 1)  # test dc_gain is zero
 
-    def test_data_normalization(self):
-
-        y = np.random.rand(100)
-
-        y_normed, y_mean, y_stretch_fact = train_data_normalization(y)
-        y_renormed = train_data_inv_normalization(y_normed, y_mean, y_stretch_fact)
-
-        self.assertAlmostEqual(np.max(np.abs(y-y_renormed)), 0, places=4)  # test norm error after renorm
-
-        self.assertAlmostEqual(np.max(np.abs(y_normed)), 1.0, places=4)  # test max abs == 1 ( stretching correct )
 
     def test_read_train_data(self):
 
