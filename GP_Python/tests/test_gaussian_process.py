@@ -78,7 +78,7 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
 
         test_result, __ = (test_GP.regression(x_test)) # 1 was also training point -> -1 expected
 
-        self.assertAlmostEqual(float(test_result), -1, 3)
+        self.assertAlmostEqual(float(test_result), -2, 3)
 
         # test 2D regression
         # with warnings.catch_warnings():     # only ignore warnings for this part
