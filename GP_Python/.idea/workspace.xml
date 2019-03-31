@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cf84ebf-844e-47fd-9b88-65605da38504" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/functions/score_gaussian_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/score_gaussian_process.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_gaussian_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_gaussian_process.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +43,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/test_gaussian_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
+            <state relative-caret-position="194">
               <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -413,12 +412,12 @@
       <workItem from="1551803702300" duration="2060000" />
       <workItem from="1553853721047" duration="597000" />
       <workItem from="1553936343132" duration="12045000" />
-      <workItem from="1554038123611" duration="3149000" />
+      <workItem from="1554038123611" duration="3274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136685000" />
+    <option name="totallyTimeSpent" value="136810000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,7 +431,7 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20199226" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20199226" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -447,7 +446,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010672" side_tool="true" weight="0.409234" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32937366" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32937366" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49839914" visible="true" weight="0.28293738" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49839914" visible="true" weight="0.49784017" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32948583" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -687,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_gaussian_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
+        <state relative-caret-position="194">
           <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
