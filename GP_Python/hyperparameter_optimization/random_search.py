@@ -59,6 +59,9 @@ class RandomSearch:
             cost = likelihood_cost_function(optimization_data_x, optimization_data_y, length,
                                             sig_f_sample, l_sample, sig_n_sample)
 
+            print('\niteration-cost =\n')
+            print(cost)
+
             iteration_cost_result[iteration, :] = cost
 
         opt_index = np.argmax(iteration_cost_result)

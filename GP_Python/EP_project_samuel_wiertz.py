@@ -20,16 +20,16 @@ y_train_p_gain = train_data['P']
 y_train_i_gain = train_data['I']
 
 
-### create Random search Objects
-# Random Search for P-Gain gaussian process
-P_Parameter_Search = RandomSearch(lower_bound=HYPERPARAMETER_LOWER_BOUND,
-                                  upper_bound=HYPERPARAMETER_UPPER_BOUND)
-# Random Search for I-Gain gaussian process
-I_Parameter_Search = RandomSearch(lower_bound=HYPERPARAMETER_LOWER_BOUND,
-                                  upper_bound=HYPERPARAMETER_UPPER_BOUND)
-
 # do Hyper.-Opt. : true: optimize parameters to loaded training data, false: use previous parameters
 if DO_HYERPARAMETER_OPTIMIZATION:
+
+    # Random Search for P-Gain gaussian process
+    P_Parameter_Search = RandomSearch(lower_bound=HYPERPARAMETER_LOWER_BOUND,
+                                      upper_bound=HYPERPARAMETER_UPPER_BOUND)
+    # Random Search for I-Gain gaussian process
+    I_Parameter_Search = RandomSearch(lower_bound=HYPERPARAMETER_LOWER_BOUND,
+                                      upper_bound=HYPERPARAMETER_UPPER_BOUND)
+
     P_Parameter_Search.optimize_parameters(num_iterations=HYPERPARAMETER_OPTIMIZATION_ITERATIONS,
                                            optimization_data_x=x_train,
                                            optimization_data_y_unnormed= y_train_p_gain)
@@ -66,7 +66,6 @@ text_input = input('Please choose:\n 1 - get controller params for given plant'
 
 if int(text_input) == 1:
     user_input_output(GP_P2, GP_I2)
-
 if int(text_input) == 2:
     rating = get_rating(GP_P2, GP_I2, 1000, 1)
     print('\nabsolute rating = ')
