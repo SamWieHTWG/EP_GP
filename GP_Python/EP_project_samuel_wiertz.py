@@ -5,10 +5,13 @@ from gaussian_process_module.gaussian_process import GaussianProcess
 from functions.store_gaussian_process import *
 from functions.score_gaussian_process import *
 from functions.constants import *
+from functions.user_input_output import user_input_output
 
 # author: Samuel Wiertz, wiertzsamuel@gmail.com
 # date: 11.01.2019
 
+# user information
+print('please wait until gaussian process is loaded')
 
 # read train data
 train_data = read_train_data('data_254')
@@ -55,10 +58,17 @@ GP_I = GaussianProcess(x_train, y_train_i_gain, i_gain_optimal_parameters[0],
 #store_gaussian_process(gaussian_process=GP_I, filename='3640_I')
 
 # load processes trained by highest amount of training data for rating
-GP_P2 = load_gaussian_process('2693_P')
-GP_I2 = load_gaussian_process('2693_I')
+GP_P2 = load_gaussian_process('3640_P')
+GP_I2 = load_gaussian_process('3640_I')
 
-rating = get_rating(GP_P2, GP_I2, 1000, 1)
-print('\nabsolute rating = ')
-print(rating)
+text_input = input('Please choose:\n 1 - get controller params for given plant'
+                   '\n 2 - execute rating of algorithm')
+
+if int(text_input) == 1:
+    user_input_output(GP_P2, GP_I2)
+
+if int(text_input) == 2:
+    rating = get_rating(GP_P2, GP_I2, 1000, 1)
+    print('\nabsolute rating = ')
+    print(rating)
 

@@ -49,8 +49,8 @@ def score_gaussian_process(gp_p, gp_i, do_plot):
         x_test[1] = num[1]
         x_test[2] = den[1]
         x_test[3] = den[2]
-        p_test, p_test_covariance = gp_p.regression(np.matrix(x_test))
-        i_test, i_test_covariance = gp_i.regression(np.matrix(x_test))
+        p_test, p_test_covariance = gp_p.regression(np.array(x_test))
+        i_test, i_test_covariance = gp_i.regression(np.array(x_test))
 
         num_of_values = constants.NUMBER_OF_TIME_POINTS
         t_gp, y_gp = step_response(p_test, i_test, num, den, num_of_values)
