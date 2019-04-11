@@ -5,7 +5,7 @@ MAX_IMAGINARY_PART = 5
 MAX_REAL_PART = 10
 
 ### probability, that the randomly generated system is an oscillating system
-PROB_FOR_OSCILLATING_SYSTEM = 0.8
+PROB_FOR_OSCILLATING_SYSTEM = 0.9
 
 
 ### limit, for which a system is marked as unstable

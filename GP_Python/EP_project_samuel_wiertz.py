@@ -14,7 +14,7 @@ from functions.user_input_output import user_input_output
 print('please wait until gaussian process is loaded')
 
 # read train data
-train_data = read_train_data('data_254')
+train_data = read_train_data('data_7810')
 x_train = np.concatenate((train_data['num'], train_data['den']), axis=1)
 y_train_p_gain = train_data['P']
 y_train_i_gain = train_data['I']
@@ -54,8 +54,8 @@ GP_I = GaussianProcess(x_train, y_train_i_gain, i_gain_optimal_parameters[0],
                        i_gain_optimal_parameters[1], i_gain_optimal_parameters[2])
 
 # store created processes
-#store_gaussian_process(gaussian_process=GP_P, filename='3640_P')
-#store_gaussian_process(gaussian_process=GP_I, filename='3640_I')
+store_gaussian_process(gaussian_process=GP_P, filename='7810_P')
+store_gaussian_process(gaussian_process=GP_I, filename='7810_I')
 
 # load processes trained by highest amount of training data for rating
 GP_P2 = load_gaussian_process('3640_P')

@@ -77,7 +77,7 @@ def score_gaussian_process(gp_p, gp_i, do_plot):
         # p.legend('Gaussian Process', 'P = 1, I = 10')
         p.legend()
         p.show()
-        time.sleep(2)
+        time.sleep(5)
 
     if error_gaussian_process < err_ref:
         gp_better_performance = True

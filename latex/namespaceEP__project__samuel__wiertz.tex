@@ -3,7 +3,7 @@
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a9c116b2484f69abc50cd256570c0bfbd}{train\+\_\+data}} = read\+\_\+train\+\_\+data(\textquotesingle{}data\+\_\+2693\textquotesingle{})
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a9c116b2484f69abc50cd256570c0bfbd}{train\+\_\+data}} = read\+\_\+train\+\_\+data(\textquotesingle{}data\+\_\+254\textquotesingle{})
 \item 
 \mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a0556a64b9975b73dee8e76dbc3a06623}{x\+\_\+train}} = np.\+concatenate((\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a9c116b2484f69abc50cd256570c0bfbd}{train\+\_\+data}}\mbox{[}\textquotesingle{}num\textquotesingle{}\mbox{]}, \mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a9c116b2484f69abc50cd256570c0bfbd}{train\+\_\+data}}\mbox{[}\textquotesingle{}den\textquotesingle{}\mbox{]}), axis=1)
 \item 
@@ -29,11 +29,13 @@
 \item 
 \mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a86353b2e32013cd6bea63030a1d79cfc}{G\+P\+\_\+I}}
 \item 
-\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a88ca819399651dc3c684c8665b9fca8f}{G\+P\+\_\+\+P2}} = load\+\_\+gaussian\+\_\+process(\textquotesingle{}2693\+\_\+\+P\textquotesingle{})
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a88ca819399651dc3c684c8665b9fca8f}{G\+P\+\_\+\+P2}} = load\+\_\+gaussian\+\_\+process(\textquotesingle{}3640\+\_\+\+P\textquotesingle{})
 \item 
-\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a85b18032455a8c7135e8ba738d96f57d}{G\+P\+\_\+\+I2}} = load\+\_\+gaussian\+\_\+process(\textquotesingle{}2693\+\_\+\+I\textquotesingle{})
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a85b18032455a8c7135e8ba738d96f57d}{G\+P\+\_\+\+I2}} = load\+\_\+gaussian\+\_\+process(\textquotesingle{}3640\+\_\+\+I\textquotesingle{})
 \item 
-\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a4bbef72351633cdd8a81560c64b0baaa}{rating}} = get\+\_\+rating(\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a88ca819399651dc3c684c8665b9fca8f}{G\+P\+\_\+\+P2}}, \mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a85b18032455a8c7135e8ba738d96f57d}{G\+P\+\_\+\+I2}}, 30, 1)
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a4b1ebcb9936b9a0e9d64331f5a8c33b7}{text\+\_\+input}}
+\item 
+\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a4bbef72351633cdd8a81560c64b0baaa}{rating}} = get\+\_\+rating(\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a88ca819399651dc3c684c8665b9fca8f}{G\+P\+\_\+\+P2}}, \mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a85b18032455a8c7135e8ba738d96f57d}{G\+P\+\_\+\+I2}}, 1000, 1)
 \end{DoxyCompactItemize}
 
 
@@ -54,7 +56,7 @@
 \index{EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}!GP\_I2@{GP\_I2}}
 \index{GP\_I2@{GP\_I2}!EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}}
 \doxysubsubsection{\texorpdfstring{GP\_I2}{GP\_I2}}
-{\footnotesize\ttfamily E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+G\+P\+\_\+\+I2 = load\+\_\+gaussian\+\_\+process(\textquotesingle{}2693\+\_\+\+I\textquotesingle{})}
+{\footnotesize\ttfamily E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+G\+P\+\_\+\+I2 = load\+\_\+gaussian\+\_\+process(\textquotesingle{}3640\+\_\+\+I\textquotesingle{})}
 
 \mbox{\Hypertarget{namespaceEP__project__samuel__wiertz_a75ad1db06909ac21d7bb16b56a2ca799}\label{namespaceEP__project__samuel__wiertz_a75ad1db06909ac21d7bb16b56a2ca799}} 
 \index{EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}!GP\_P@{GP\_P}}
@@ -72,7 +74,7 @@
 \index{EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}!GP\_P2@{GP\_P2}}
 \index{GP\_P2@{GP\_P2}!EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}}
 \doxysubsubsection{\texorpdfstring{GP\_P2}{GP\_P2}}
-{\footnotesize\ttfamily E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+G\+P\+\_\+\+P2 = load\+\_\+gaussian\+\_\+process(\textquotesingle{}2693\+\_\+\+P\textquotesingle{})}
+{\footnotesize\ttfamily E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+G\+P\+\_\+\+P2 = load\+\_\+gaussian\+\_\+process(\textquotesingle{}3640\+\_\+\+P\textquotesingle{})}
 
 \mbox{\Hypertarget{namespaceEP__project__samuel__wiertz_ad90de70e4c85de232827413c349fcd2c}\label{namespaceEP__project__samuel__wiertz_ad90de70e4c85de232827413c349fcd2c}} 
 \index{EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}!i\_gain\_optimal\_parameters@{i\_gain\_optimal\_parameters}}
@@ -89,7 +91,7 @@
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 =  RandomSearch(lower\_bound=HYPERPARAMETER\_LOWER\_BOUND,}
-\DoxyCodeLine{2                                   upper\_bound=HYPERPARAMETER\_UPPER\_BOUND)}
+\DoxyCodeLine{2                                       upper\_bound=HYPERPARAMETER\_UPPER\_BOUND)}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespaceEP__project__samuel__wiertz_a0c1e7f8b0a2c95792710d9ab4e36250f}\label{namespaceEP__project__samuel__wiertz_a0c1e7f8b0a2c95792710d9ab4e36250f}} 
@@ -125,20 +127,32 @@
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 =  RandomSearch(lower\_bound=HYPERPARAMETER\_LOWER\_BOUND,}
-\DoxyCodeLine{2                                   upper\_bound=HYPERPARAMETER\_UPPER\_BOUND)}
+\DoxyCodeLine{2                                       upper\_bound=HYPERPARAMETER\_UPPER\_BOUND)}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespaceEP__project__samuel__wiertz_a4bbef72351633cdd8a81560c64b0baaa}\label{namespaceEP__project__samuel__wiertz_a4bbef72351633cdd8a81560c64b0baaa}} 
 \index{EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}!rating@{rating}}
 \index{rating@{rating}!EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}}
 \doxysubsubsection{\texorpdfstring{rating}{rating}}
-{\footnotesize\ttfamily E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+rating = get\+\_\+rating(\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a88ca819399651dc3c684c8665b9fca8f}{G\+P\+\_\+\+P2}}, \mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a85b18032455a8c7135e8ba738d96f57d}{G\+P\+\_\+\+I2}}, 30, 1)}
+{\footnotesize\ttfamily E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+rating = get\+\_\+rating(\mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a88ca819399651dc3c684c8665b9fca8f}{G\+P\+\_\+\+P2}}, \mbox{\hyperlink{namespaceEP__project__samuel__wiertz_a85b18032455a8c7135e8ba738d96f57d}{G\+P\+\_\+\+I2}}, 1000, 1)}
 
+\mbox{\Hypertarget{namespaceEP__project__samuel__wiertz_a4b1ebcb9936b9a0e9d64331f5a8c33b7}\label{namespaceEP__project__samuel__wiertz_a4b1ebcb9936b9a0e9d64331f5a8c33b7}} 
+\index{EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}!text\_input@{text\_input}}
+\index{text\_input@{text\_input}!EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}}
+\doxysubsubsection{\texorpdfstring{text\_input}{text\_input}}
+{\footnotesize\ttfamily E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+text\+\_\+input}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  input(\textcolor{stringliteral}{'Please choose:\(\backslash\)n 1 -\/ get controller params for given plant'}}
+\DoxyCodeLine{2                    \textcolor{stringliteral}{'\(\backslash\)n 2 -\/ execute rating of algorithm'})}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{namespaceEP__project__samuel__wiertz_a9c116b2484f69abc50cd256570c0bfbd}\label{namespaceEP__project__samuel__wiertz_a9c116b2484f69abc50cd256570c0bfbd}} 
 \index{EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}!train\_data@{train\_data}}
 \index{train\_data@{train\_data}!EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}}
 \doxysubsubsection{\texorpdfstring{train\_data}{train\_data}}
-{\footnotesize\ttfamily E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+train\+\_\+data = read\+\_\+train\+\_\+data(\textquotesingle{}data\+\_\+2693\textquotesingle{})}
+{\footnotesize\ttfamily E\+P\+\_\+project\+\_\+samuel\+\_\+wiertz.\+train\+\_\+data = read\+\_\+train\+\_\+data(\textquotesingle{}data\+\_\+254\textquotesingle{})}
 
 \mbox{\Hypertarget{namespaceEP__project__samuel__wiertz_a0556a64b9975b73dee8e76dbc3a06623}\label{namespaceEP__project__samuel__wiertz_a0556a64b9975b73dee8e76dbc3a06623}} 
 \index{EP\_project\_samuel\_wiertz@{EP\_project\_samuel\_wiertz}!x\_train@{x\_train}}
