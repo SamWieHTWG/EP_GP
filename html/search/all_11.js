@@ -1,9 +1,17 @@
 var searchData=
 [
-  ['ub_5fl',['ub_l',['../classrandom__search_1_1RandomSearch.html#a5915a35bd663e259408d36251a2b2907',1,'random_search::RandomSearch']]],
-  ['ub_5fsig_5ff',['ub_sig_f',['../classrandom__search_1_1RandomSearch.html#aabefc71b632c8afdcddd6955f891c9cf',1,'random_search::RandomSearch']]],
-  ['ub_5fsig_5fn',['ub_sig_n',['../classrandom__search_1_1RandomSearch.html#a26d50d347c668c768b878efefe732d34',1,'random_search::RandomSearch']]],
-  ['unittest',['UnitTest',['../classtest__gaussian__process_1_1UnitTest.html',1,'test_gaussian_process']]],
-  ['user_5finput_5foutput',['user_input_output',['../namespaceuser__input__output.html',1,'user_input_output'],['../namespaceuser__input__output.html#ae5a1c11ff1b1bb4de3ca592fc964d740',1,'user_input_output.user_input_output()']]],
-  ['user_5finput_5foutput_2epy',['user_input_output.py',['../user__input__output_8py.html',1,'']]]
+  ['test_5fcreate_5frandom_5fpt2',['test_create_random_pt2',['../classtest__gaussian__process_1_1UnitTest.html#a6e3c976a71d85cf1163810757aadb125',1,'test_gaussian_process::UnitTest']]],
+  ['test_5fdata_5fnormalization',['test_data_normalization',['../classtest__gaussian__process_1_1UnitTest.html#a491bb97acb4142f529aa4ef5ff9f4405',1,'test_gaussian_process::UnitTest']]],
+  ['test_5fgaussian_5fprocess',['test_gaussian_process',['../namespacetest__gaussian__process.html',1,'test_gaussian_process'],['../classtest__gaussian__process_1_1UnitTest.html#a4e3ee0ff75bb321aa58ae987781444e1',1,'test_gaussian_process.UnitTest.test_gaussian_process()'],['../namespacetest__gaussian__process.html#ab4a9e98db4328a4ebdd74d94193db78f',1,'test_gaussian_process.test_gaussian_process()']]],
+  ['test_5fgaussian_5fprocess_2epy',['test_gaussian_process.py',['../archive_2test__gaussian__process_8py.html',1,'(Global Namespace)'],['../tests_2test__gaussian__process_8py.html',1,'(Global Namespace)']]],
+  ['test_5finv_5fspeed',['test_inv_speed',['../namespacetest__inv__speed.html',1,'']]],
+  ['test_5finv_5fspeed_2epy',['test_inv_speed.py',['../test__inv__speed_8py.html',1,'']]],
+  ['test_5frandom_5fsearch',['test_random_search',['../classtest__gaussian__process_1_1UnitTest.html#a70392490870f27c35cf28ca0ee93c890',1,'test_gaussian_process::UnitTest']]],
+  ['test_5fread_5ftrain_5fdata',['test_read_train_data',['../classtest__gaussian__process_1_1UnitTest.html#a88f9f9ac54a54d44dcc25547409abc48',1,'test_gaussian_process::UnitTest']]],
+  ['test_5fstore_5fload_5fgaussian_5fprocess',['test_store_load_gaussian_process',['../classtest__gaussian__process_1_1UnitTest.html#aeaea0df419d20be64b1a0f642109eecc',1,'test_gaussian_process::UnitTest']]],
+  ['text_5finput',['text_input',['../namespaceEP__project__samuel__wiertz.html#a4b1ebcb9936b9a0e9d64331f5a8c33b7',1,'EP_project_samuel_wiertz']]],
+  ['train',['train',['../classgaussian__process_1_1GaussianProcess.html#a116fecb81d2840cc9d95cad2676d38b9',1,'gaussian_process::GaussianProcess']]],
+  ['train_5fdata',['train_data',['../namespaceEP__project__samuel__wiertz.html#a9c116b2484f69abc50cd256570c0bfbd',1,'EP_project_samuel_wiertz']]],
+  ['train_5fdata_5finv_5fnormalization',['train_data_inv_normalization',['../namespacedata__normalization.html#aa5f08fc0597a2e6b71468a1ad938b90b',1,'data_normalization']]],
+  ['train_5fdata_5fnormalization',['train_data_normalization',['../namespacedata__normalization.html#a5d67cb9ac5486318cb42ad7812093b5c',1,'data_normalization']]]
 ];

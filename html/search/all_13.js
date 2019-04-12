@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['x',['X',['../namespacegaussian__process.html#ab343292cd7b967af775ef578559fc42d',1,'gaussian_process.X()'],['../namespacetest__inv__speed.html#afe3241ea3d70b26025cb8364b032c479',1,'test_inv_speed.X()']]],
-  ['x_5ftrain',['X_train',['../classgaussian__process_1_1GaussianProcess.html#a595de98ea09a76ad0453f489556d9bfc',1,'gaussian_process.GaussianProcess.X_train()'],['../namespaceEP__project__samuel__wiertz.html#a0556a64b9975b73dee8e76dbc3a06623',1,'EP_project_samuel_wiertz.x_train()']]]
+  ['validate_5fgaussian_5fprocess_5finitialization_5finputs',['validate_gaussian_process_initialization_inputs',['../namespacecheck__inputs.html#ac7255c60009d4fb59ec59cbf556ad197',1,'check_inputs']]],
+  ['validate_5fgaussian_5fprocess_5fregression_5finputs',['validate_gaussian_process_regression_inputs',['../namespacecheck__inputs.html#a71f8c6cdda37254eb0ec944ece8a45a0',1,'check_inputs']]],
+  ['validate_5foptimize_5fparameters_5finputs',['validate_optimize_parameters_inputs',['../namespacecheck__random__search__inputs.html#ad958a3b59a066b9ce7bebf2a451ddf54',1,'check_random_search_inputs']]],
+  ['validate_5frandom_5fsearch_5finit_5finputs',['validate_random_search_init_inputs',['../namespacecheck__random__search__inputs.html#a16c02e82f9d90e5da57f663acb703080',1,'check_random_search_inputs']]]
 ];

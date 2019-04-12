@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['y',['y',['../namespacegaussian__process.html#a945c1ed7a480a42dfd7e7af0dabc9ac4',1,'gaussian_process.y()'],['../namespacetest__inv__speed.html#a634db70135c2e71d35c97bc13cae7ab2',1,'test_inv_speed.Y()']]],
-  ['y_5fcompression_5ffact',['y_compression_fact',['../classgaussian__process_1_1GaussianProcess.html#a7f8dfe0186c2e85d288e890912deafc3',1,'gaussian_process::GaussianProcess']]],
-  ['y_5ftrain_5fi_5fgain',['y_train_i_gain',['../namespaceEP__project__samuel__wiertz.html#aa8aac19c5507014c05e635228407051f',1,'EP_project_samuel_wiertz']]],
-  ['y_5ftrain_5fp_5fgain',['y_train_p_gain',['../namespaceEP__project__samuel__wiertz.html#a622bcb18e1db838ca8febcd01ccd384b',1,'EP_project_samuel_wiertz']]]
+  ['x',['X',['../namespacegaussian__process.html#ab343292cd7b967af775ef578559fc42d',1,'gaussian_process.X()'],['../namespacetest__inv__speed.html#afe3241ea3d70b26025cb8364b032c479',1,'test_inv_speed.X()']]],
+  ['x_5ftrain',['X_train',['../classgaussian__process_1_1GaussianProcess.html#a595de98ea09a76ad0453f489556d9bfc',1,'gaussian_process.GaussianProcess.X_train()'],['../namespaceEP__project__samuel__wiertz.html#a0556a64b9975b73dee8e76dbc3a06623',1,'EP_project_samuel_wiertz.x_train()']]]
 ];

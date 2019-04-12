@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['num_5fiterations',['num_iterations',['../namespaceEP__project__samuel__wiertz.html#a0c1e7f8b0a2c95792710d9ab4e36250f',1,'EP_project_samuel_wiertz']]],
-  ['number_5fof_5frating_5fiterations',['NUMBER_OF_RATING_ITERATIONS',['../namespaceconstants.html#ad1a92167ff0f2ada1a51c40325a6dc1b',1,'constants']]],
-  ['number_5fof_5ftime_5fpoints',['NUMBER_OF_TIME_POINTS',['../namespaceconstants.html#a7d14973d132ad246422ffa9d0ddfd111',1,'constants']]]
+  ['max_5fimaginary_5fpart',['MAX_IMAGINARY_PART',['../namespaceconstants.html#a13b5680c53126fa3cfcda5643d0c5f20',1,'constants']]],
+  ['max_5freal_5fpart',['MAX_REAL_PART',['../namespaceconstants.html#a8e09928e3bbdf09d1e59eeeb5618c63d',1,'constants']]]
 ];

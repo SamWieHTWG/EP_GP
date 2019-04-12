@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['i_5fgain_5foptimal_5fparameters',['i_gain_optimal_parameters',['../namespaceEP__project__samuel__wiertz.html#ad90de70e4c85de232827413c349fcd2c',1,'EP_project_samuel_wiertz']]],
-  ['i_5fparameter_5fsearch',['I_Parameter_Search',['../namespaceEP__project__samuel__wiertz.html#a1078944f732dc84283eb2cf299906403',1,'EP_project_samuel_wiertz']]],
-  ['inv_5fcov',['inv_Cov',['../classgaussian__process_1_1GaussianProcess.html#a711d8dae0b690fb2fa87632cb66fa873',1,'gaussian_process::GaussianProcess']]]
+  ['hyperparameter_5flower_5fbound',['HYPERPARAMETER_LOWER_BOUND',['../namespaceconstants.html#a72c9b0a13219e7aaac6bd4b0ac70d48c',1,'constants']]],
+  ['hyperparameter_5foptimization_5fiterations',['HYPERPARAMETER_OPTIMIZATION_ITERATIONS',['../namespaceconstants.html#a8aa14d4d8d4073e4d02b9f235846508c',1,'constants']]],
+  ['hyperparameter_5fupper_5fbound',['HYPERPARAMETER_UPPER_BOUND',['../namespaceconstants.html#a27c60863063007c72c923de442d9ea59',1,'constants']]]
 ];

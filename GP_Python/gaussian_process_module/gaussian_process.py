@@ -15,8 +15,8 @@ class GaussianProcess:
         used to train the process.
         See http://www.gaussianprocess.org/gpml/ for further informations.
 
-        @param x_train: numpy_matrix: Input of Traning Data
-        @param y_train: numpy_matrix: Output of Training Data
+        @param x_train: numpy_array: Input of Traning Data
+        @param y_train: numpy_array: Output of Training Data
         @param parameter_sig_n: float: Hyperparameter defining output noise
         @param parameter_l: float: Hyperparameter defining length scale
         @param parameter_sig_f: float: Hyperparameter defining process noise
@@ -48,7 +48,7 @@ class GaussianProcess:
     def regression(self, x):
         """!@brief data regression on given point
 
-        @param x: numpy_matrix: given input for data regression
+        @param x: numpy_array: given input for data regression
         @param [out] y_estimated: estimated y-value to input
         @param [out] estimation_deviation: deviation/ probability of estimated value
         """

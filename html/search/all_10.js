@@ -1,17 +1,14 @@
 var searchData=
 [
-  ['test_5fcreate_5frandom_5fpt2',['test_create_random_pt2',['../classtest__gaussian__process_1_1UnitTest.html#a6e3c976a71d85cf1163810757aadb125',1,'test_gaussian_process::UnitTest']]],
-  ['test_5fdata_5fnormalization',['test_data_normalization',['../classtest__gaussian__process_1_1UnitTest.html#a491bb97acb4142f529aa4ef5ff9f4405',1,'test_gaussian_process::UnitTest']]],
-  ['test_5fgaussian_5fprocess',['test_gaussian_process',['../namespacetest__gaussian__process.html',1,'test_gaussian_process'],['../classtest__gaussian__process_1_1UnitTest.html#a4e3ee0ff75bb321aa58ae987781444e1',1,'test_gaussian_process.UnitTest.test_gaussian_process()'],['../namespacetest__gaussian__process.html#ab4a9e98db4328a4ebdd74d94193db78f',1,'test_gaussian_process.test_gaussian_process()']]],
-  ['test_5fgaussian_5fprocess_2epy',['test_gaussian_process.py',['../archive_2test__gaussian__process_8py.html',1,'(Global Namespace)'],['../tests_2test__gaussian__process_8py.html',1,'(Global Namespace)']]],
-  ['test_5finv_5fspeed',['test_inv_speed',['../namespacetest__inv__speed.html',1,'']]],
-  ['test_5finv_5fspeed_2epy',['test_inv_speed.py',['../test__inv__speed_8py.html',1,'']]],
-  ['test_5frandom_5fsearch',['test_random_search',['../classtest__gaussian__process_1_1UnitTest.html#a70392490870f27c35cf28ca0ee93c890',1,'test_gaussian_process::UnitTest']]],
-  ['test_5fread_5ftrain_5fdata',['test_read_train_data',['../classtest__gaussian__process_1_1UnitTest.html#a88f9f9ac54a54d44dcc25547409abc48',1,'test_gaussian_process::UnitTest']]],
-  ['test_5fstore_5fload_5fgaussian_5fprocess',['test_store_load_gaussian_process',['../classtest__gaussian__process_1_1UnitTest.html#aeaea0df419d20be64b1a0f642109eecc',1,'test_gaussian_process::UnitTest']]],
-  ['text_5finput',['text_input',['../namespaceEP__project__samuel__wiertz.html#a4b1ebcb9936b9a0e9d64331f5a8c33b7',1,'EP_project_samuel_wiertz']]],
-  ['train',['train',['../classgaussian__process_1_1GaussianProcess.html#a116fecb81d2840cc9d95cad2676d38b9',1,'gaussian_process::GaussianProcess']]],
-  ['train_5fdata',['train_data',['../namespaceEP__project__samuel__wiertz.html#a9c116b2484f69abc50cd256570c0bfbd',1,'EP_project_samuel_wiertz']]],
-  ['train_5fdata_5finv_5fnormalization',['train_data_inv_normalization',['../namespacedata__normalization.html#aa5f08fc0597a2e6b71468a1ad938b90b',1,'data_normalization']]],
-  ['train_5fdata_5fnormalization',['train_data_normalization',['../namespacedata__normalization.html#a5d67cb9ac5486318cb42ad7812093b5c',1,'data_normalization']]]
+  ['score_5fgaussian_5fprocess',['score_gaussian_process',['../namespacescore__gaussian__process.html',1,'score_gaussian_process'],['../namespacescore__gaussian__process.html#adbf827be1d76dc0d0202dfd359f8cc29',1,'score_gaussian_process.score_gaussian_process()']]],
+  ['score_5fgaussian_5fprocess_2epy',['score_gaussian_process.py',['../score__gaussian__process_8py.html',1,'']]],
+  ['size',['size',['../namespacetest__inv__speed.html#a660a470e8772aa79426d3d7e46664581',1,'test_inv_speed']]],
+  ['squared_5fexponential_5fkernel',['squared_exponential_kernel',['../namespacesquared__exponential__kernel.html',1,'squared_exponential_kernel'],['../namespacesquared__exponential__kernel.html#abf905f812733953de2c059b583bf6777',1,'squared_exponential_kernel.squared_exponential_kernel()']]],
+  ['squared_5fexponential_5fkernel_2epy',['squared_exponential_kernel.py',['../squared__exponential__kernel_8py.html',1,'']]],
+  ['start',['start',['../namespacetest__inv__speed.html#a9e39fb74d63f871ed151ec30f62fea47',1,'test_inv_speed']]],
+  ['step_5fresponse',['step_response',['../namespacescore__gaussian__process.html#af34a02978930f5a424ef1a8e8259880a',1,'score_gaussian_process']]],
+  ['step_5fsimulation_5fend_5ftime',['STEP_SIMULATION_END_TIME',['../namespaceconstants.html#a481a4b65914d38192e143b2ce8eea345',1,'constants']]],
+  ['step_5fsimulation_5fstart_5ftime',['STEP_SIMULATION_START_TIME',['../namespaceconstants.html#a5539f6db3cd454daa1d4d913abfb130f',1,'constants']]],
+  ['store_5fgaussian_5fprocess',['store_gaussian_process',['../namespacestore__gaussian__process.html',1,'store_gaussian_process'],['../namespacestore__gaussian__process.html#a8d69e31616cb4093e16e6ab512773448',1,'store_gaussian_process.store_gaussian_process()']]],
+  ['store_5fgaussian_5fprocess_2epy',['store_gaussian_process.py',['../store__gaussian__process_8py.html',1,'']]]
 ];

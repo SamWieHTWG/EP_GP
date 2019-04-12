@@ -9,7 +9,7 @@ def read_train_data(filename):
     @param filename str: filename of mat file without .mat extension
 
 
-    @return np matrix: train data as matrix, each line is one train data set
+    @return np_array: train data as matrix, each line is one train data set
     """
 
     #filename = '/home/samuel/Documents/EP_GP/GP_Python/train_data/data_2693.mat'

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['opt_5fparameters',['opt_parameters',['../classrandom__search_1_1RandomSearch.html#a5553bccd0ac88783380aecd74629c2c9',1,'random_search::RandomSearch']]],
-  ['optimization_5fdata_5fx',['optimization_data_x',['../namespaceEP__project__samuel__wiertz.html#a3d326b92b6d1bf4c890a1fa039af4830',1,'EP_project_samuel_wiertz']]],
-  ['optimization_5fdata_5fy_5funnormed',['optimization_data_y_unnormed',['../namespaceEP__project__samuel__wiertz.html#aad17bbe7e7fc5fdcb69be87bd6ebbe23',1,'EP_project_samuel_wiertz']]],
-  ['order',['order',['../classgaussian__process_1_1GaussianProcess.html#a9028b9e7651b751bc181de8f4d8372b1',1,'gaussian_process::GaussianProcess']]]
+  ['num_5fiterations',['num_iterations',['../namespaceEP__project__samuel__wiertz.html#a0c1e7f8b0a2c95792710d9ab4e36250f',1,'EP_project_samuel_wiertz']]],
+  ['number_5fof_5frating_5fiterations',['NUMBER_OF_RATING_ITERATIONS',['../namespaceconstants.html#ad1a92167ff0f2ada1a51c40325a6dc1b',1,'constants']]],
+  ['number_5fof_5ftime_5fpoints',['NUMBER_OF_TIME_POINTS',['../namespaceconstants.html#a7d14973d132ad246422ffa9d0ddfd111',1,'constants']]]
 ];

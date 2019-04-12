@@ -6,8 +6,8 @@ def squared_exponential_kernel(x1, x2, ell, s_f):
     """!
     The squared exponential kernel is an essential part of the gaussian process.
     Further informations: http://www.gaussianprocess.org/gpml/
-    @param x1: np_matrix: first input vector
-    @param x2: np_matrix: second input vector
+    @param x1: np_array: first input vector
+    @param x2: np_array: second input vector
     @param ell: float: parameter, defines length_scale
     @param s_f: float: parameter, defines process noise
     @return: np_matrix: covariance between both input vectors

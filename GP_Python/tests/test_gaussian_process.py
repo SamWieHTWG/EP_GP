@@ -13,6 +13,9 @@ from gaussian_process_module.gaussian_process import GaussianProcess
 class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
 
     def test_data_normalization(self):
+        """!
+        Test normalization of data by execute normalization at first and inverse normalizationn afterwards
+        """
 
         y = np.random.rand(100)
 
@@ -24,6 +27,9 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
         self.assertAlmostEqual(np.max(np.abs(y_normed)), 1.0, places=4)  # test max abs == 1 ( stretching correct )
 
     def test_create_random_pt2(self):
+        """!
+        Test output of random pt2 is equal to ndarray, check dc gain is normed
+        """
 
         num, den = create_random_pt2()
 
@@ -40,10 +46,9 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
 
 
     def test_read_train_data(self):
-
-        # with warnings.catch_warnings():  # only ignore warnings for this part
-        #     warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
-
+        """!
+        kind of dummy tests, only check whether types are correct
+        """
         train_data = read_train_data('data_254')
 
         np_array_ref = np.zeros(100)
@@ -56,10 +61,9 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
         assert type(Y_train_P) == type(np_array_ref) and type(Y_train_I) == type(np_array_ref)
 
     def test_store_load_gaussian_process(self):
-
-        # with warnings.catch_warnings():     # only ignore warnings for this part
-        #     warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
-
+        """!
+        Test store and load function by storing at first and comparing to loaded version
+        """
         test_GP = GaussianProcess(np.array([[-1], [0], [1]]), np.array([[1], [0], [-1]]), 1, 1, 1)
 
         store_gaussian_process(test_GP, 'unit_test')
@@ -68,11 +72,10 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
         self.assertEqual(test_GP, loaded_GP)
 
     def test_gaussian_process(self):
-
-        # test 1D regression
-        # with warnings.catch_warnings():     # only ignore warnings for this part
-        #    warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
-
+        """!
+        Test Gaussian Process implementation  as module test, one dimensional regression, different values
+        Check input validation is working
+        """
         test_GP = GaussianProcess(np.array([[-1.0], [0.0], [1.0]]), np.array([[1], [0], [-1]]), 0.001, 1.0, 1.0)
         x_test = np.array([1])
 
@@ -80,9 +83,6 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
 
         self.assertAlmostEqual(float(test_result), -1, 3)
 
-        # test 2D regression
-        # with warnings.catch_warnings():     # only ignore warnings for this part
-        #     warnings.simplefilter("ignore")  # unittest produces warnings when using np.matrix -> ignore
 
         test_GP = GaussianProcess(np.array([[-1, 2], [0, 1], [1, 3]]), np.array([[1], [0], [-1]]), 0.001, 1, 1)
         x_test = np.array([1, 3])
@@ -97,7 +97,9 @@ class UnitTest(unittest.TestCase):  # inherits from unittest.testcase
             GaussianProcess(np.array([[-1], [0], [1]]), np.array([[1], [0]]), 0.001, 1.0, 1.0)
 
     def test_random_search(self):
-
+        """!
+        Test hyperparameter-optimization input validation is working
+        """
 
         # test lb < ub validation
         ub = HYPERPARAMETER_UPPER_BOUND
